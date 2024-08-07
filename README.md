@@ -1,3 +1,3 @@
 # Call-me-Zak.github.io
 test
-note to self : have this link to projects
+link to projects will be updated shortly
