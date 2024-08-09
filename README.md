@@ -1,7 +1,7 @@
 # Call-me-Zak.github.io
 <h1>test</h1>
 <div>link to projects will be updated shortly</div>
-<script src="./index.html"></script>
+<!-- <script src="./index.html"></script> -->
 
 - # 👋 Hello, I'm Zachary.
 - #### 🌱 I'm a mechnical engineering graduate with a keen interest in cybersecurity, and I am now eager to transition into this field, specifically aiming to join a Security Operations Center (SOC) as a Tier 1 Analyst.
