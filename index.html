@@ -52,5 +52,18 @@
         <p>&copy; 2024 Videographer's Portfolio | Designed by <a href="#">Your Name</a></p>
     </footer>
 
+      <!-- JavaScript -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
