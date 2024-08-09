@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Set your email address where you want to receive the contact form messages
-    $to = "your-email@example.com";
+    $to = "foceg21642@biowey.com";
     $subject = "New Contact Form Submission";
 
     // Prepare the email body
