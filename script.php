@@ -1,4 +1,8 @@
 <?php
+// Enable error reporting to see any issues
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitize and validate input to prevent injection attacks
     $name = filter_var(trim($_POST["name"]), FILTER_SANITIZE_STRING);
@@ -11,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Set your email address where you want to receive the contact form messages
-    $to = "foceg21642@biowey.com";
+    $to = "foceg21642@biowey.com"; // Replace with your actual email address
     $subject = "New Contact Form Submission";
 
     // Prepare the email body
@@ -20,7 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_body .= "Message:\n$message\n";
 
     // Set email headers
-    $headers = "From: $email";
+    $headers = "From: $email" . "\r\n" . 
+               "Reply-To: $email" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
 
     // Send the email
     if (mail($to, $subject, $email_body, $headers)) {
