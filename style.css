@@ -76,37 +76,37 @@ header nav ul li a:hover {
 }
 
 /* Services Section */
-.services {
+.projects {
     padding: 60px 20px;
     background: #11144c;
     text-align: center;
 }
 
-.services h2 {
+.projects h2 {
     font-size: 36px;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
-.services .service {
+.projects .project {
     display: inline-block;
     width: 30%;
     margin: 20px;
     vertical-align: top;
 }
 
-.services .service i {
+.projects .project i {
     font-size: 48px;
     margin-bottom: 10px;
     color: #ff6700;
 }
 
-.services .service h3 {
+.projects .project h3 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.services .service p {
+.projects .project p {
     font-size: 16px;
     line-height: 1.5;
 }
