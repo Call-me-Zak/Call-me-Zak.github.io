@@ -7,7 +7,8 @@
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="style.css">
     <!-- Include the Marked library to render Markdown -->
-   
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="render.js" defer></script> <!-- Use defer to ensure scripts load after HTML -->
 </head>
 <body>
 
@@ -16,17 +17,15 @@
         <nav>
             <ul>
                 <li><a href="index.html#home">Home</a></li>
-                <li><a href="/about.html">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- About Section -->
     <section id="about">
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-        <script src="render.js"></script>
         <h1>About Me</h1>
         <!-- Container to display README.md content -->
         <div id="markdown-content"></div>
@@ -36,11 +35,6 @@
     <footer>
         <p>&copy; Zakaria's Portfolio | Designed by <a href="#">Zakaria</a></p>
     </footer>
-
-    <!-- JavaScript to load and render README.md -->
-   <!-- JavaScript to load and render README.md -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="render.js"></script>
 
 </body>
 </html>
