@@ -1,16 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("README.md")
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('README.md')
         .then(response => {
             if (!response.ok) {
-                throw new Error("Network response was not ok " + response.statusText);
+                throw new Error('Network response was not ok: ' + response.statusText);
             }
             return response.text();
         })
         .then(text => {
-            document.getElementById("markdown-content").innerHTML = marked(text);
+            // Use the marked function to convert Markdown to HTML
+            document.getElementById('markdown-content').innerHTML = marked(text);
         })
         .catch(error => {
-            console.error("There was a problem with the fetch operation:", error);
-            document.getElementById("markdown-content").innerHTML = "<p>Error loading content.</p>";
+            console.error('There was a problem with the fetch operation:', error);
+            document.getElementById('markdown-content').innerHTML = '<p>Error loading content.</p>';
         });
 });
