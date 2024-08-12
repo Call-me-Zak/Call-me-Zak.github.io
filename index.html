@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- Link to icon library from fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="readme_render.js"></script>
+   
 </head>
 <body>
 
@@ -56,6 +56,9 @@
     </footer>
 
       <!-- JavaScript -->
+    <!-- container to display readme.md contents -->
+    <div id="markdown-content"></div> 
+    <script src="render_readme.js"></script>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
