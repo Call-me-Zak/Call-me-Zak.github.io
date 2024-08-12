@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+ document.addEventListener('DOMContentLoaded', function () {
     fetch('README.md')
         .then(response => response.text())
         .then(text => {
