@@ -1,4 +1,3 @@
-<script>
 document.addEventListener("DOMContentLoaded", function() {
     fetch('README.md')
         .then(response => response.text())
@@ -9,4 +8,3 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('Error fetching README.md:', error);
         });
 });
-</script>
