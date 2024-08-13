@@ -1,9 +1,26 @@
-/* Adjust Projects Section for Four Columns */
+/* Projects Section */
+.projects {
+    padding: 60px 20px;
+    background: #11144c;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projects h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
 .projects .project {
-    display: inline-block;
-    width: 22%; /* Adjusted width for four columns with some margin */
-    margin: 1.5%;
-    vertical-align: top;
+    flex: 1 1 22%; /* Adjusted width to fit four columns */
+    margin: 10px; /* Adjust margin for spacing */
+    box-sizing: border-box; /* Ensure padding/margins don’t affect total width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .projects .project i {
@@ -20,18 +37,4 @@
 .projects .project p {
     font-size: 16px;
     line-height: 1.5;
-}
-
-/* Optional: Ensure responsiveness */
-@media (max-width: 1024px) {
-    .projects .project {
-        width: 45%; /* Adjust for tablets or smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .projects .project {
-        width: 100%; /* Full width for mobile devices */
-        margin-bottom: 20px;
-    }
 }
