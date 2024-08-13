@@ -13,6 +13,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Background Video Styling */
@@ -56,16 +57,17 @@ header nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    height: 55vh; /* Further reduced height */
+    height: 60vh; /* Set height relative to viewport height */
     background: url('hero-image.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 20px; /* Add padding for smaller screens */
 }
 
 .hero h1 {
-    font-size: 50px;
+    font-size: 8vw; /* Responsive font size based on viewport width */
     margin-bottom: 10px;
     text-transform: uppercase;
     transition: font-size 0.3s ease, color 0.3s ease;
@@ -73,7 +75,7 @@ header nav ul li a:hover {
 
 /* Hero Section Hover Effect */
 .hero:hover h1 {
-    font-size: 50px; /* No size increase on hover */
+    font-size: 8vw; /* Keep font size unchanged on hover */
     color: #ffffff; /* Keep color unchanged */
 }
 
@@ -95,12 +97,13 @@ header nav ul li a:hover {
 
 /* Projects Section */
 .projects {
-    padding: 60px 20px;
+    padding: 4vh 4vw; /* Use viewport units for padding */
     background: #11144c;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-grow: 1; /* Allow section to grow and fill available space */
 }
 
 /* Ensure Projects Section is Centered */
@@ -111,9 +114,9 @@ header nav ul li a:hover {
 .projects .project {
     background: #1e2152;
     border-radius: 15px;
-    padding: 30px;
-    margin: 15px;
-    width: calc(25% - 30px); /* Adjust width for 4 columns with spacing */
+    padding: 2vw; /* Responsive padding */
+    margin: 1vw; /* Responsive margin */
+    width: calc(25% - 2vw); /* Responsive width for 4 columns */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
