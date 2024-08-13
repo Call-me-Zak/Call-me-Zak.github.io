@@ -1,0 +1,191 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0b0e34;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background Video Styling */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header Styling */
+header {
+    background: #1e2152;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #ff6700;
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff6700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hero a:hover {
+    background: #e55c00;
+}
+
+/* Projects Section */
+.projects {
+    padding: 60px 20px;
+    background: #11144c;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projects .project {
+    background: #1e2152;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    width: calc(25% - 30px); /* Adjust width for 4 columns with spacing */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden; /* Hide overflow for matrix effect */
+}
+
+/* Matrix effect */
+.projects .project::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 255, 0, 0.5); /* Green text for the matrix effect */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    animation: matrix 1s forwards; /* Change to trigger only once */
+}
+
+.projects .project:hover::before {
+    opacity: 1;
+}
+
+@keyframes matrix {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.projects .project:hover {
+    background: #EF820D; /* Orange color */
+    color: #fff;
+    transform: scale(1.05); /* Slightly enlarge the box */
+    box-shadow: 0 6px 12px rgba(239, 130, 13, 0.5); /* Extended light effect with brighter orange shadow */
+}
+
+/* Increase sizes */
+.projects .project .icon {
+    display: block;
+    margin: 0 auto 10px;
+    width: 132px; /* Increased size by 20% */
+    height: 132px; /* Increased size by 20% */
+}
+
+.projects .project h3 {
+    font-size: 38px; /* Increased size by 20% */
+    margin-bottom: 10px;
+}
+
+.projects .project p {
+    font-size: 28px; /* Increased size by 20% */
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background: #1e2152;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer p a {
+    color: #ff6700;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
