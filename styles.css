@@ -57,7 +57,7 @@ header nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    height: 60vh; /* Adjust height for better fit */
+    height: 50vh; /* Reduced height to fit content */
     background: url('hero-image.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -74,8 +74,8 @@ header nav ul li a:hover {
 
 /* Hero Section Hover Effect */
 .hero:hover h1 {
-    font-size: 60px; /* Increase font size by 20% */
-    color: rgba(255, 105, 0, 0.8); /* Change color to orange */
+    font-size: 50px; /* No size increase on hover */
+    color: #fff; /* No color change on hover */
 }
 
 .hero a {
@@ -102,6 +102,7 @@ header nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    min-height: 100vh; /* Ensure section takes at least full viewport height */
 }
 
 /* Ensure Projects Section is Centered */
@@ -115,17 +116,16 @@ header nav ul li a:hover {
     padding: 30px;
     margin: 15px;
     width: calc(25% - 30px); /* Adjust width for 4 columns with spacing */
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Added filter for blur effect */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden; /* Hide overflow for effect */
     text-align: center; /* Center content inside the box */
-    transform-style: preserve-3d; /* Ensure 3D transformations are preserved */
 }
 
-/* 3D Tilt Effect */
+/* Hover Blur Effect */
 .projects .project:hover {
-    transform: rotateX(10deg) rotateY(10deg); /* Apply tilt effect */
+    filter: blur(5px); /* Apply blur effect */
     background: rgba(255, 105, 0, 0.6); /* Bright orange with high intensity */
     color: #fff;
     transform: scale(1.05); /* Slightly enlarge the box */
