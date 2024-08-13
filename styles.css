@@ -103,10 +103,11 @@ header nav ul li a:hover {
     margin: 15px;
     width: 22%;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .projects .project:hover {
-    background: rgba(255, 105, 0, 0.2); /* Faded orange */
+    background: rgba(255, 105, 0, 0.2); /* Light orange with transparency */
     transform: scale(1.05); /* Slightly enlarge the box */
 }
 
@@ -115,20 +116,14 @@ header nav ul li a:hover {
     margin: 0 auto 10px;
     width: 80px;
     height: 80px;
-    color: #ffffff; /* Default color */
 }
 
-.projects .project .icon {
-    font-size: 40px;
-    color: #ffffff; /* Default color */
-}
-
-.projects h3 {
+.projects .project h3 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.projects p {
+.projects .project p {
     font-size: 18px;
     line-height: 1.5;
 }
