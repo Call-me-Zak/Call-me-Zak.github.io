@@ -13,7 +13,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    perspective: 1000px; /* Add perspective to the body */
+    perspective: 1500px; /* Add perspective to the body for 3D effect */
 }
 
 /* Background Video Styling */
@@ -120,42 +120,16 @@ header nav ul li a:hover {
     position: relative;
     overflow: hidden; /* Hide overflow for effect */
     text-align: center; /* Center content inside the box */
+    transform-style: preserve-3d; /* Ensure 3D transformations are preserved */
 }
 
 /* 3D Tilt Effect */
-.projects .project {
-    transform-style: preserve-3d; /* Ensure 3D transformations are preserved */
-    transition: transform 0.3s ease;
-}
-
 .projects .project:hover {
+    transform: rotateX(10deg) rotateY(10deg); /* Apply tilt effect */
     background: rgba(255, 105, 0, 0.6); /* Bright orange with high intensity */
     color: #fff;
+    transform: scale(1.05); /* Slightly enlarge the box */
     box-shadow: 0 6px 12px rgba(255, 105, 0, 0.5); /* Extended light effect with brighter orange shadow */
-}
-
-/* 3D Tilt Effect on Mouse Move */
-.projects .project {
-    position: relative;
-}
-
-.projects .project:hover {
-    cursor: pointer;
-}
-
-.projects .project::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotateX(0deg) rotateY(0deg);
-    transition: transform 0.3s ease;
-}
-
-.projects .project:hover::before {
-    transform: rotateX(10deg) rotateY(10deg);
 }
 
 /* Increase icon size by 15% */
