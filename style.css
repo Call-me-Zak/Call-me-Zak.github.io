@@ -1,0 +1,37 @@
+/* Adjust Projects Section for Four Columns */
+.projects .project {
+    display: inline-block;
+    width: 22%; /* Adjusted width for four columns with some margin */
+    margin: 1.5%;
+    vertical-align: top;
+}
+
+.projects .project i {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #ff6700;
+}
+
+.projects .project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.projects .project p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Optional: Ensure responsiveness */
+@media (max-width: 1024px) {
+    .projects .project {
+        width: 45%; /* Adjust for tablets or smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects .project {
+        width: 100%; /* Full width for mobile devices */
+        margin-bottom: 20px;
+    }
+}
