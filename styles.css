@@ -68,6 +68,13 @@ header nav ul li a:hover {
     font-size: 50px;
     margin-bottom: 10px;
     text-transform: uppercase;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+/* Hero Section Hover Effect */
+.hero:hover h1 {
+    font-size: 60px; /* Increase font size by 20% */
+    color: #FA8128; /* Change color to orange */
 }
 
 .hero a {
@@ -96,75 +103,103 @@ header nav ul li a:hover {
     justify-content: center;
 }
 
+/* Ensure Projects Section is Centered */
+.projects h2 {
+    margin-bottom: 20px;
+}
+
 .projects .project {
     background: #1e2152;
     border-radius: 15px;
-    padding: 20px;
+    padding: 30px;
     margin: 15px;
     width: calc(25% - 30px); /* Adjust width for 4 columns with spacing */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
-    overflow: hidden; /* Hide overflow for matrix effect */
+    overflow: hidden; /* Hide overflow for effect */
+    text-align: center; /* Center content inside the box */
 }
 
-/* Matrix effect */
-.projects .project::before {
-    content: ' ';
+/* Glitch effect */
+.projects .project::before,
+.projects .project::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    color: rgba(0, 255, 0, 0.5); /* Green text for the matrix effect */
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2em;
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: repeat(20, 1fr);
+    background: rgba(255, 105, 0, 0.5); /* Semi-transparent orange overlay */
+    z-index: 1;
+    pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none;
-    z-index: 1;
-    animation: matrix 1s infinite;
+    animation: glitch 1.5s infinite;
 }
 
-.projects .project:hover::before {
+.projects .project::before {
+    animation-delay: 0.1s;
+}
+
+.projects .project::after {
+    animation-delay: 0.2s;
+}
+
+.projects .project:hover::before,
+.projects .project:hover::after {
     opacity: 1;
 }
 
-@keyframes matrix {
+@keyframes glitch {
     0% {
-        transform: translateY(-100%);
+        transform: translateX(0) skew(0deg);
+        clip-path: inset(0 0 0 0);
+    }
+    20% {
+        transform: translateX(-10px) skew(-2deg);
+        clip-path: inset(0 0 0 -10px);
+    }
+    40% {
+        transform: translateX(10px) skew(2deg);
+        clip-path: inset(0 0 0 10px);
+    }
+    60% {
+        transform: translateX(-10px) skew(-2deg);
+        clip-path: inset(0 0 0 -10px);
+    }
+    80% {
+        transform: translateX(10px) skew(2deg);
+        clip-path: inset(0 0 0 10px);
     }
     100% {
-        transform: translateY(100%);
+        transform: translateX(0) skew(0deg);
+        clip-path: inset(0 0 0 0);
     }
 }
 
 .projects .project:hover {
-    background: rgba(255, 105, 0, 0.6); /* Brighter orange with higher intensity */
+    background: rgba(255, 105, 0, 0.6); /* Bright orange with high intensity */
     color: #fff;
     transform: scale(1.05); /* Slightly enlarge the box */
     box-shadow: 0 6px 12px rgba(255, 105, 0, 0.5); /* Extended light effect with brighter orange shadow */
 }
 
-/* Increase sizes */
+/* Increase icon size by 15% */
 .projects .project .icon {
     display: block;
     margin: 0 auto 10px;
-    width: 110px; /* Increased size by 20% */
-    height: 110px; /* Increased size by 20% */
+    width: 115px; /* Increased size by 15% */
+    height: 115px; /* Increased size by 15% */
 }
 
 .projects .project h3 {
-    font-size: 32px; /* Increased size by 20% */
+    font-size: 24px; /* Keep original size */
     margin-bottom: 10px;
 }
 
 .projects .project p {
-    font-size: 24px; /* Increased size by 20% */
+    font-size: 18px; /* Keep original size */
     line-height: 1.5;
 }
 
