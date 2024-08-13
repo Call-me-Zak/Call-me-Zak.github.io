@@ -6,7 +6,7 @@
 }
 
 /* Body Styling */
-body {
+body, html {
     font-family: 'Arial', sans-serif;
     background-color: #0b0e34;
     color: #ffffff;
@@ -108,7 +108,7 @@ header nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Space between items */
+    
 }
 
 }
