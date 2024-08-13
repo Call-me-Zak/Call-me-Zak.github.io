@@ -112,10 +112,10 @@ header nav ul li a:hover {
     width: 100%; /* Make sure the title takes the full width */
 }
 
-/* Increased Box Size and Font */
+/* Updated Box Size and Font */
 .projects .project {
-    flex: 1 1 26%; /* Increased width for each column */
-    margin: 15px; /* Increased space between columns */
+    flex: 1 1 22%; /* Adjusted width for each column */
+    margin: 20px; /* Increased space between columns */
     box-sizing: border-box; /* Ensure padding/margins don’t affect total width */
     display: flex;
     flex-direction: column;
@@ -123,26 +123,44 @@ header nav ul li a:hover {
     transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
     position: relative;
     background: #1e2152; /* Background color for project boxes */
-    padding: 24px; /* Increased padding inside each project box */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 20px; /* Increased font size */
+    padding: 30px; /* Increased padding */
+    height: auto; /* Ensure height adapts to content */
 }
 
 /* Hover Effect */
 .projects .project:hover {
-    background: rgba(135, 206, 250, 0.3); /* Sky blue color with opacity */
-    box-shadow: 0 0 15px rgba(135, 206, 250, 0.7); /* Sky blue glow effect */
+    background: skyblue;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-/* Footer */
+/* Icon Styling */
+.projects .project .icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #ff6700;
+}
+
+/* Project Title Styling */
+.projects .project h3 {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Project Description Styling */
+.projects .project p {
+    font-size: 18px; /* Increased font size */
+    line-height: 1.5;
+    color: #dcdcdc;
+}
+
+/* Footer Styling */
 footer {
     background: #1e2152;
     color: #ffffff;
     text-align: center;
     padding: 20px;
-    position: relative; /* Ensures footer is above the video */
-    z-index: 2; /* Ensures footer is above the video */
 }
 
 footer p {
