@@ -136,9 +136,9 @@ header nav ul li a:hover {
 
 /* Icon Styling */
 .projects .project .icon {
-    font-size: 48px;
+    width: 96px; /* Adjust size as needed */
+    height: 96px;
     margin-bottom: 10px;
-    color: #ff6700;
 }
 
 /* Project Title Styling */
