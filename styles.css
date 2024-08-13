@@ -121,12 +121,12 @@ header nav ul li a:hover {
     text-align: center; /* Center content inside the box */
 }
 
-/* Neon Glow effect */
+/* Zoom In effect */
 .projects .project:hover {
-    background: #1e2152; /* Dark background for contrast */
-    color: #FA8128; /* Neon orange text color */
-    transform: scale(1.05); /* Slightly enlarge the box */
-    box-shadow: 0 0 20px rgba(250, 129, 40, 0.8); /* Neon glow effect */
+    background: rgba(255, 105, 0, 0.6); /* Bright orange with high intensity */
+    color: #fff;
+    transform: scale(1.1); /* Zoom in effect with 10% increase */
+    box-shadow: 0 6px 12px rgba(255, 105, 0, 0.5); /* Extended light effect with brighter orange shadow */
 }
 
 /* Increase icon size by 15% */
