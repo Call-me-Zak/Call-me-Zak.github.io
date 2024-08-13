@@ -13,13 +13,11 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    position: relative;
-    z-index: 1;
 }
 
 /* Background Video Styling */
 .background-video {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -33,11 +31,8 @@ header {
     background: #1e2152;
     padding: 20px 0;
     text-align: center;
-    position: relative;
-    z-index: 2;
 }
 
-/* Navigation */
 header nav ul {
     list-style: none;
     display: flex;
@@ -67,8 +62,6 @@ header nav ul li a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
-    z-index: 2;
 }
 
 .hero h1 {
@@ -95,66 +88,44 @@ header nav ul li a:hover {
 
 /* Projects Section */
 .projects {
-    padding: 60px 20px;
-    background: #11144c;
-    text-align: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
+    justify-content: space-between;
+    padding: 60px 20px;
+    background: #11144c;
 }
 
-.projects h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    width: 100%;
-}
-
-/* Updated Box Size and Font */
-.projects .project {
-    flex: 1 1 22%;
-    margin: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-    position: relative;
+.project {
+    flex: 1 1 23%;
+    margin: 10px;
+    padding: 20px;
     background: #1e2152;
-    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.project:hover {
+    background: #87CEFA; /* Sky blue */
+}
+
+.project img.icon {
+    width: 80px; /* Adjust size as needed */
     height: auto;
-}
-
-/* Hover Effect */
-.projects .project:hover {
-    background: skyblue;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: scale(1.05);
-}
-
-/* Icon Styling */
-.projects .project .icon {
-    font-size: 48px; /* Adjust size as needed */
     margin-bottom: 10px;
 }
 
-/* Project Title Styling */
-.projects .project h3 {
-    font-size: 28px;
+.project h3 {
+    font-size: 24px;
     margin-bottom: 10px;
-    font-weight: bold;
 }
 
-/* Project Description Styling */
-.projects .project p {
-    font-size: 18px;
+.project p {
+    font-size: 16px;
     line-height: 1.5;
-    color: #dcdcdc;
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
     background: #1e2152;
     color: #ffffff;
