@@ -13,6 +13,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    position: relative; /* Ensure body is positioned relative to other elements */
+    z-index: 1; /* Make sure body is above the background video */
 }
 
 /* Background Video Styling */
@@ -32,9 +34,10 @@ header {
     padding: 20px 0;
     text-align: center;
     position: relative; /* Ensures it is above the video */
-    z-index: 1; /* Keeps it above the video */
+    z-index: 2; /* Ensures header is above the video */
 }
 
+/* Navigation */
 header nav ul {
     list-style: none;
     display: flex;
@@ -65,7 +68,7 @@ header nav ul li a:hover {
     justify-content: center;
     text-align: center;
     position: relative;
-    z-index: 1; /* Ensures it is above the video */
+    z-index: 2; /* Ensures hero section is above the video */
 }
 
 .hero h1 {
@@ -98,6 +101,8 @@ header nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    z-index: 2; /* Ensures projects section is above the video */
 }
 
 .projects h2 {
@@ -136,6 +141,8 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 20px;
+    position: relative; /* Ensures footer is above the video */
+    z-index: 2; /* Ensures footer is above the video */
 }
 
 footer p {
