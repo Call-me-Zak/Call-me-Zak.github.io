@@ -107,9 +107,10 @@ header nav ul li a:hover {
     width: 100%; /* Make sure the title takes the full width */
 }
 
+/* Increased Box Size and Font */
 .projects .project {
-    flex: 1 1 22%; /* Ensure four columns fit side by side */
-    margin: 10px; /* Space between columns */
+    flex: 1 1 26%; /* Increased width for each column */
+    margin: 15px; /* Increased space between columns */
     box-sizing: border-box; /* Ensure padding/margins don’t affect total width */
     display: flex;
     flex-direction: column;
@@ -117,8 +118,9 @@ header nav ul li a:hover {
     transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
     position: relative;
     background: #1e2152; /* Background color for project boxes */
-    padding: 20px; /* Padding inside each project box */
+    padding: 24px; /* Increased padding inside each project box */
     border-radius: 8px; /* Rounded corners */
+    font-size: 20px; /* Increased font size */
 }
 
 /* Hover Effect */
