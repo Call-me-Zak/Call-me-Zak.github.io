@@ -14,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative; /* Added to allow the background video to be positioned correctly */
-    overflow: hidden; /* Ensure no scrollbars appear due to the video */
+    overflow: auto;     /* "hidden;"  Ensures no scrollbars appear due to the video while "auto;" allows it*/
 }
 
 /* Background Video Styling */
