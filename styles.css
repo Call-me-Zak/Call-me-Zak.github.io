@@ -73,8 +73,8 @@ header nav ul li a:hover {
 
 /* Hero Section Hover Effect */
 .hero:hover h1 {
-    font-size: 60px; /* Increase font size by 20% */
-    color: rgba(255, 105, 0, 0.8); /* Change color to orange */
+    font-size: 50px; /* No size increase on hover */
+    color: #ffffff; /* Keep color unchanged */
 }
 
 .hero a {
