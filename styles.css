@@ -102,14 +102,15 @@ header nav ul li a:hover {
     padding: 20px;
     margin: 15px;
     width: calc(25% - 30px); /* Adjust width for 4 columns with spacing */
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .projects .project:hover {
-    background: rgba(255, 105, 0, 0.3); /* Semi-transparent orange with higher intensity */
+    background: rgba(255, 105, 0, 0.6); /* Brighter orange with higher intensity */
     color: #fff;
     transform: scale(1.05); /* Slightly enlarge the box */
+    box-shadow: 0 6px 12px rgba(255, 105, 0, 0.5); /* Extended light effect with brighter orange shadow */
 }
 
 .projects .project .icon {
