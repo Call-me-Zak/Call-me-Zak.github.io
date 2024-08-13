@@ -101,13 +101,16 @@ header nav ul li a:hover {
 
 /* Projects Section */
 .projects {
-    padding: 20px; /* Keep padding for container */
+    padding: 0; /* Remove padding */
+    margin: 0;  /* Remove margin */
     background: #11144c;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px; /* Space between items */
+}
+
 }
 
 /* Ensure Projects Section is Centered */
