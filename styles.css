@@ -107,7 +107,7 @@ header nav ul li a:hover {
 }
 
 .projects .project:hover {
-    background: rgba(255, 105, 0, 0.5); /* Semi-transparent orange */
+    background: rgba(255, 105, 0, 0.3); /* Semi-transparent orange with higher intensity */
     color: #fff;
     transform: scale(1.05); /* Slightly enlarge the box */
 }
