@@ -56,7 +56,7 @@ header nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    height: 70vh;
+    height: 60vh; /* Reduced height */
     background: url('hero-image.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -68,15 +68,10 @@ header nav ul li a:hover {
     font-size: 50px;
     margin-bottom: 10px;
     text-transform: uppercase;
-    transition: font-size 0.3s ease, color 0.3s ease;
+    /* Removed hover transition */
 }
 
-/* Hero Section Hover Effect */
-.hero:hover h1 {
-    font-size: 60px; /* Increase font size by 20% */
-    color: #FA8128; /* Change color to orange */
-}
-
+/* Hero Section */
 .hero a {
     display: inline-block;
     margin-top: 20px;
