@@ -101,7 +101,7 @@ header nav ul li a:hover {
 
 /* Projects Section */
 .projects {
-    padding: 20px; /* Reduced padding */
+    padding: 0; /* Remove padding */
     background: #11144c;
     text-align: center;
     display: flex;
@@ -118,8 +118,8 @@ header nav ul li a:hover {
     background: #1e2152;
     border-radius: 15px;
     padding: 20px; /* Adjusted padding */
-    margin: 10px; /* Adjusted margin */
-    width: calc(25% - 20px); /* Adjust width to fit better */
+    margin: 0; /* Remove margin */
+    width: calc(25% - 0px); /* Adjust width to fit better */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
