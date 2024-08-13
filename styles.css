@@ -56,7 +56,7 @@ header nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    height: 50vh; /* Adjust height for better fit */
+    height: 50vh; /* Reduced height to fit the viewport */
     background: url('hero-image.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -71,7 +71,7 @@ header nav ul li a:hover {
     transition: font-size 0.3s ease, color 0.3s ease;
 }
 
-/* Hero Section Hover Effect */
+/* Hero Section Hover Effect Removed */
 .hero:hover h1 {
     font-size: 50px; /* No size increase on hover */
     color: #fff; /* No color change on hover */
@@ -95,14 +95,13 @@ header nav ul li a:hover {
 
 /* Projects Section */
 .projects {
-    padding: 60px 20px;
+    padding: 40px 20px; /* Adjust padding for better fit */
     background: #11144c;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-height: 100vh; /* Ensure section takes at least full viewport height */
-    position: relative; /* Relative positioning for the static effect */
+    min-height: 50vh; /* Ensure section takes at least half viewport height */
 }
 
 /* Ensure Projects Section is Centered */
@@ -124,9 +123,42 @@ header nav ul li a:hover {
     transform-style: preserve-3d; /* Ensure 3D transformations are preserved */
 }
 
-/* Hover Blur Effect */
+/* Matrix Effect */
+.projects .project::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Lighter overlay */
+    color: rgba(0, 255, 0, 0.5); /* Green text for the matrix effect */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    animation: matrix 1s infinite;
+}
+
+.projects .project:hover::before {
+    opacity: 1;
+}
+
+@keyframes matrix {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
 .projects .project:hover {
-    filter: blur(5px); /* Apply blur effect */
     background: rgba(255, 105, 0, 0.6); /* Bright orange with high intensity */
     color: #fff;
     transform: scale(1.05); /* Slightly enlarge the box */
@@ -149,39 +181,6 @@ header nav ul li a:hover {
 .projects .project p {
     font-size: 18px; /* Keep original size */
     line-height: 1.5;
-}
-
-/* Static Effect */
-.projects .project::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* Light color overlay for static effect */
-    background-image: linear-gradient(135deg, transparent 25%, rgba(255, 255, 255, 0.5) 25%, rgba(255, 255, 255, 0.5) 50%, transparent 50%, transparent 75%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.5) 100%);
-    background-size: 50px 50px;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease;
-    z-index: 2; /* Ensure it sits on top of the content */
-    animation: static 0.5s infinite; /* Apply static animation */
-}
-
-.projects .project:hover::before {
-    opacity: 1; /* Show static effect on hover */
-}
-
-@keyframes static {
-    0% {
-        transform: translateX(0) translateY(0);
-    }
-    50% {
-        transform: translateX(2px) translateY(2px);
-    }
-    100% {
-        transform: translateX(-2px) translateY(-2px);
-    }
 }
 
 /* Footer */
