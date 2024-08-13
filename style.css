@@ -96,6 +96,11 @@ header nav ul li a:hover {
     justify-content: center;
 }
 
+/* Ensure Projects Section is Centered */
+.projects h2 {
+    margin-bottom: 20px;
+}
+
 .projects .project {
     background: #1e2152;
     border-radius: 15px;
@@ -106,6 +111,7 @@ header nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden; /* Hide overflow for matrix effect */
+    text-align: center; /* Center content inside the box */
 }
 
 /* Matrix effect */
@@ -150,7 +156,7 @@ header nav ul li a:hover {
     box-shadow: 0 6px 12px rgba(255, 105, 0, 0.5); /* Extended light effect with brighter orange shadow */
 }
 
-/* Increase sizes */
+/* Increase icon size by 20% */
 .projects .project .icon {
     display: block;
     margin: 0 auto 10px;
@@ -159,12 +165,12 @@ header nav ul li a:hover {
 }
 
 .projects .project h3 {
-    font-size: 38px; /* Increased size by 20% */
+    font-size: 24px; /* Keep original size */
     margin-bottom: 10px;
 }
 
 .projects .project p {
-    font-size: 28px; /* Increased size by 20% */
+    font-size: 18px; /* Keep original size */
     line-height: 1.5;
 }
 
