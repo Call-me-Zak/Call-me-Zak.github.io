@@ -88,40 +88,42 @@ header nav ul li a:hover {
 
 /* Projects Section */
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding: 60px 20px;
     background: #11144c;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.project {
-    flex: 1 1 23%;
-    margin: 10px;
-    padding: 20px;
+.projects .project {
     background: #1e2152;
     border-radius: 15px;
-    text-align: center;
-    transition: background-color 0.3s ease;
+    padding: 20px;
+    margin: 15px;
+    width: 22%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.project:hover {
-    background: #87CEFA; /* Sky blue */
+.projects .project:hover {
+    background: #87CEEB; /* Sky Blue */
+    transform: scale(1.05); /* Slightly enlarge the box */
 }
 
-.project img.icon {
-    width: 80px; /* Adjust size as needed */
-    height: auto;
-    margin-bottom: 10px;
+.projects .project .icon {
+    display: block;
+    margin: 0 auto 10px;
+    width: 80px;
+    height: 80px;
 }
 
-.project h3 {
+.projects h3 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.project p {
-    font-size: 16px;
+.projects p {
+    font-size: 18px;
     line-height: 1.5;
 }
 
