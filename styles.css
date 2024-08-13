@@ -92,23 +92,22 @@ header nav ul li a:hover {
     background: #11144c;
     text-align: center;
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .projects .project {
     background: #1e2152;
     border-radius: 15px;
     padding: 20px;
+    margin: 15px;
     width: 22%;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .projects .project:hover {
     background: #87CEEB; /* Sky Blue */
     transform: scale(1.05); /* Slightly enlarge the box */
-    box-shadow: 0 0 20px #87CEEB; /* Shining effect */
 }
 
 .projects .project .icon {
