@@ -68,10 +68,15 @@ header nav ul li a:hover {
     font-size: 50px;
     margin-bottom: 10px;
     text-transform: uppercase;
-    /* Removed hover transition */
+    transition: font-size 0.3s ease, color 0.3s ease;
 }
 
-/* Hero Section */
+/* Hero Section Hover Effect */
+.hero:hover h1 {
+    font-size: 60px; /* Increase font size by 20% */
+    color: rgba(255, 105, 0, 0.8); /* Change color to orange */
+}
+
 .hero a {
     display: inline-block;
     margin-top: 20px;
@@ -116,12 +121,12 @@ header nav ul li a:hover {
     text-align: center; /* Center content inside the box */
 }
 
-/* Zoom In effect */
+/* Neon Glow effect */
 .projects .project:hover {
     background: rgba(255, 105, 0, 0.6); /* Bright orange with high intensity */
     color: #fff;
-    transform: scale(1.1); /* Zoom in effect with 10% increase */
-    box-shadow: 0 6px 12px rgba(255, 105, 0, 0.5); /* Extended light effect with brighter orange shadow */
+    transform: scale(1.05); /* Slightly enlarge the box */
+    box-shadow: 0 0 20px rgba(255, 105, 0, 0.8); /* Neon glow effect */
 }
 
 /* Increase icon size by 15% */
