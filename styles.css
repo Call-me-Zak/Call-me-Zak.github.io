@@ -115,17 +115,17 @@ header nav ul li a:hover {
 .projects .project .icon {
     display: block;
     margin: 0 auto 10px;
-    width: 80px;
-    height: 80px;
+    width: 92px; /* Increased size by 15% */
+    height: 92px; /* Increased size by 15% */
 }
 
 .projects .project h3 {
-    font-size: 24px;
+    font-size: 27.6px; /* Increased size by 15% */
     margin-bottom: 10px;
 }
 
 .projects .project p {
-    font-size: 18px;
+    font-size: 20.7px; /* Increased size by 15% */
     line-height: 1.5;
 }
 
