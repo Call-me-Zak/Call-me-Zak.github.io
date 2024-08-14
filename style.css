@@ -39,6 +39,7 @@ header {
     z-index: 1; /* Ensure it is above other content */
 }
 
+/* Navigation Styling */
 header nav ul {
     list-style: none;
     display: flex;
@@ -188,27 +189,17 @@ header nav ul li a:hover {
     line-height: 1.5;
 }
 
+/* Main Content */
+main {
+    flex: 1; /* Allows main to grow and take available space */
+}
+
 /* Footer */
 footer {
     background: rgba(30, 33, 82, 0.7); /* Semi-transparent background */
     color: #ffffff;
     text-align: center;
     padding: 20px;
-    margin-top: auto; /* Push footer to the bottom */
     position: relative;
     z-index: 1; /* Ensure it is above other content */
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
-}
-
-footer p a {
-    color: #ff6700;
-    text-decoration: none;
-}
-
-footer p a:hover {
-    text-decoration: underline;
 }
