@@ -1,0 +1,149 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0b0e34;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    background: rgba(30, 33, 82, 0.7);
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #ff6700;
+}
+
+/* CTF Writeups Section */
+.ctf-writeups {
+    padding: 20px;
+    background: #11144c;
+    text-align: center;
+}
+
+.ctf-writeups h2 {
+    margin-bottom: 20px;
+}
+
+.ctf {
+    background: #1e2152;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+}
+
+.ctf-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ctf-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px; /* Padding will be added during expansion */
+    background: #000;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Matrix Effect */
+.ctf::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(50, 205, 50, 0.5); /* Lime green text for the matrix effect */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    animation: matrix 1s infinite;
+}
+
+.ctf:hover::before {
+    opacity: 1;
+}
+
+@keyframes matrix {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.ctf:hover {
+    background: rgba(50, 205, 50, 0.6); /* Lime green with high intensity */
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(50, 205, 50, 0.5); /* Extended light effect with lime green shadow */
+}
+
+.technologies {
+    font-size: 16px;
+    color: #bbb;
+    text-align: right;
+}
+
+/* Footer */
+footer {
+    background: rgba(30, 33, 82, 0.7);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+}
