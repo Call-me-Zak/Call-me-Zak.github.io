@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0b0e34;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background Video Styling */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header Styling */
+header {
+    background: rgba(30, 33, 82, 0.7);
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #ff6700;
+}
+
+/* Projects Table Section */
+.projects-table {
+    padding: 20px;
+    background: #11144c;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.projects-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 20px;
+    border: 1px solid #333;
+    background: #1e2152;
+    color: #fff;
+    font-size: 18px;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-table th {
+    background: #0b0e34;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.project-row:hover td {
+    background: rgba(0, 105, 255, 0.6); /* Bright blue with high intensity */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 105, 255, 0.5); /* Extended light effect with brighter blue shadow */
+}
+
+.project-row:hover .project::before {
+    opacity: 1;
+}
+
+/* Matrix Effect */
+.project-row .project::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 255, 255, 0.5); /* Blue text for the matrix effect */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    animation: matrix-blue 1s infinite;
+}
+
+@keyframes matrix-blue {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Footer */
+footer {
+    background: rgba(30, 33, 82, 0.7);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+}
