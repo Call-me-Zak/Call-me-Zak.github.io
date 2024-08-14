@@ -202,4 +202,5 @@ footer {
     padding: 20px;
     position: relative;
     z-index: 1; /* Ensure it is above other content */
+    margin-top: auto; /* Push footer to the bottom */
 }
