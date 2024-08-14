@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+/* Remove default link styling for the project link */
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Ensure the entire div is clickable */
+}
+
+.project-link:hover {
+    text-decoration: none; /* No underline on hover */
+    color: inherit; /* Keep the text color unchanged */
+}
+
 /* Body Styling */
 body {
     font-family: 'Arial', sans-serif;
