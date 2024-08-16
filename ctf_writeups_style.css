@@ -56,8 +56,7 @@ header nav ul li a:hover {
     padding: 20px;
     background: #11144c;
     text-align: center;
-    overflow: hidden; /* prevents content from going off-screen */
-}
+    }
 
 .ctf-writeups h2 {
     margin-bottom: 20px;
@@ -128,7 +127,7 @@ header nav ul li a:hover {
 .ctf:hover {
     background: rgba(50, 205, 50, 0.6); /* Lime green with high intensity */
     color: #fff;
-    transform: scale(1.03);
+    transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(50, 205, 50, 0.5); /* Extended light effect with lime green shadow */
 }
 
