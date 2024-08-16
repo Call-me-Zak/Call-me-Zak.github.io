@@ -72,6 +72,8 @@ header nav ul li a:hover {
     position: relative;
     text-align: left;
     cursor: pointer;
+    margin: 0 auto 20px auto; /* center containers with margins */
+    width: 80%
 }
 
 .ctf-header {
