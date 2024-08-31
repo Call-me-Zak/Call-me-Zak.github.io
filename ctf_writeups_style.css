@@ -81,6 +81,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer; /* Indicate clickable header */
 }
 
 .ctf-content {
@@ -89,6 +90,12 @@ header nav ul li a:hover {
     padding: 0 20px; /* Padding will be added during expansion */
     background: #000;
     transition: max-height 0.3s ease, padding 0.3s ease;
+    text-align: left; /* Ensure the text inside is left-aligned for readability */
+    display: flex; /* Flexbox to center content */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    margin: 0 auto; /* Center the container within the parent */
 }
 
 /* Matrix Effect */
@@ -148,4 +155,36 @@ footer {
     position: relative;
     z-index: 1;
     margin-top: auto;
+}
+
+.ctf-content p {
+    color: #ffffff; /* Text color */
+    margin-bottom: 15px; /* Space between paragraphs */
+    line-height: 1.6; /* Improve readability */
+    max-width: 600px; /* Limit the width of paragraphs */
+}
+
+.ctf-content pre {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto; /* Scroll horizontally if needed */
+}
+
+.ctf-content code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #222;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .ctf {
+        width: 95%; /* Expand to more width on smaller screens */
+    }
+
+    .ctf-content {
+        max-width: 100%; /* Full width on smaller devices */
+    }
 }
