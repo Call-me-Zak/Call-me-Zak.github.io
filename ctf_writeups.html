@@ -6,6 +6,7 @@
     <title>CTF Writeups</title>
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="ctf_writeups_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <!-- Header Section -->
@@ -89,6 +90,24 @@
                 }
             });
         });
+
+    // Function to fetch and render markdown content
+        function loadMarkdownContent(mdFile, elementId) {
+            fetch(mdFile)
+                .then(response => response.text())
+                .then(markdown => {
+                    const contentElement = document.getElementById(elementId);
+                    contentElement.innerHTML = marked.parse(markdown);
+                })
+                .catch(error => console.error('Error fetching markdown:', error));
+        }
+
+        // Load markdown files for each CTF content div
+        loadMarkdownContent('ctf1.md', 'ctf1-content');
+        loadMarkdownContent('ctf2.md', 'ctf2-content');
+        loadMarkdownContent('ctf3.md', 'ctf3-content');
+        loadMarkdownContent('ctf4.md', 'ctf4-content');
+        loadMarkdownContent('ctf5.md', 'ctf5-content');
     </script>
 </body>
 </html>
