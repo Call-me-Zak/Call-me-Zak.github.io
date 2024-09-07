@@ -76,7 +76,7 @@ header nav ul li a:hover {
     width: 80%;
 }
 
-/* Ensure .ctf-content is above the hover effect */
+/* CTF Header Styling */
 .ctf-header {
     padding: 20px;
     display: flex;
@@ -92,7 +92,7 @@ header nav ul li a:hover {
     overflow: hidden;
     padding: 0; /* Removed padding */
     background: #000;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+    transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
     text-align: center; /* Center text inside the content */
     margin: 0 auto; /* Center the content block */
     width: calc(100% - 40px); /* Adjust width to accommodate padding */
@@ -111,6 +111,7 @@ header nav ul li a:hover {
     visibility: visible; /* Ensure content is visible */
 }
 
+/* Ensure Content Is Not Covered by Matrix Effect */
 .ctf-content img {
     max-width: 100%;
     height: auto;
@@ -131,10 +132,10 @@ header nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(20, 1fr);
-    opacity: 0;
+    opacity: 0; /* Hide the matrix effect initially */
     transition: opacity 0.3s ease;
     pointer-events: none;
-    z-index: 1; /* Ensure it’s below the content */
+    z-index: 1; /* Matrix effect is below the content */
     animation: matrix 1s infinite;
 }
 
@@ -146,7 +147,7 @@ header nav ul li a:hover {
 }
 
 .ctf-header:hover::before {
-    opacity: 1;
+    opacity: 1; /* Show matrix effect on hover */
 }
 
 @keyframes matrix {
