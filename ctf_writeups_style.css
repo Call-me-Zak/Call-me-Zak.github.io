@@ -72,7 +72,7 @@ header nav ul li a:hover {
     position: relative;
     text-align: left;
     cursor: pointer;
-    margin: 0 auto 20px auto; /* Center containers with margins */
+    margin: 0 auto 20px auto;
     width: 80%;
 }
 
@@ -81,7 +81,8 @@ header nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer; /* Indicate clickable header */
+    cursor: pointer;
+    position: relative; /* Important for the matrix effect */
 }
 
 /* CTF Content Styling */
@@ -116,8 +117,8 @@ header nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: rgba(50, 205, 50, 0.5); /* Lime green text for the matrix effect */
+    background: rgba(0, 0, 0, 0.3); /* Slight transparency */
+    color: #32CD32; /* Lively green */
     font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
     display: grid;
@@ -145,9 +146,9 @@ header nav ul li a:hover {
 }
 
 .ctf:hover {
-    background: rgba(50, 205, 50, 0.2);
+    background: rgba(50, 205, 50, 0.4); /* More vivid green with less transparency */
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px rgba(50, 205, 50, 0.5);
 }
 
 /* Footer Styling */
@@ -161,3 +162,14 @@ footer {
     width: 100%;
     margin-top: auto;
 }
+
+/* Fix Left Margin/Padding for Content */
+.ctf-content p {
+    margin-left: 20px; /* Add margin to avoid text touching the edges */
+    padding-left: 10px;
+}
+
+.ctf-content pre, .ctf-content code {
+    margin-left: 20px; /* For code blocks, add margin as well */
+}
+
