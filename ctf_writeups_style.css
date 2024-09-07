@@ -80,7 +80,7 @@ header nav ul li a:hover {
     border-radius: 15px;
     margin-bottom: 20px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Adjusted transition duration */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
     text-align: center;
@@ -163,8 +163,8 @@ header nav ul li a:hover {
 
 /* Glow effect limited to the header on hover */
 .ctf:hover {
-    transform: scale(1.03); /* Slightly enlarge the entire container */
-    box-shadow: 0 0 15px rgba(50, 255, 50, 0.8); /* Glow effect */
+    transform: scale(1.03); /* Slightly smaller scale to reduce excessive growth */
+    box-shadow: 0 0 10px rgba(50, 255, 50, 0.8); /* Adjusted glow effect */
 }
 
 /* Matrix Effect */
