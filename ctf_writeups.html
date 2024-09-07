@@ -1,130 +1,125 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Writeups</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="ctf_writeups_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-/* Body Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #0b0e34;
-    color: #ffffff;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+    <!-- CTF Writeups Section -->
+    <section class="ctf-writeups" id="ctf-writeups">
+        <h2>Capture The Flag Writeups</h2>
 
-/* Header Styling */
-header {
-    background: rgba(30, 33, 82, 0.7);
-    padding: 15px 0;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
+        <!-- CTF 1 -->
+        <div class="ctf">
+            <div class="ctf-header">
+                <h3>MEOW</h3>
+                <div class="technologies">nmap, telnet</div>
+            </div>
+            <div class="ctf-content" id="ctf1-content">
+                <!-- The markdown content will be inserted here -->
+            </div>
+        </div>
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-}
+        <!-- CTF 2 -->
+        <div class="ctf">
+            <div class="ctf-header">
+                <h3>FAWN</h3>
+                <div class="technologies">nmap, ftp</div>
+            </div>
+            <div class="ctf-content" id="ctf2-content">
+                <!-- The markdown content will be inserted here -->
+            </div>
+        </div>
 
-header nav ul li {
-    margin: 0 15px;
-}
+        <!-- CTF 3 -->
+        <div class="ctf">
+            <div class="ctf-header">
+                <h3>DANCING</h3>
+                <div class="technologies">nmap, smbclient</div>
+            </div>
+            <div class="ctf-content" id="ctf3-content">
+                <!-- The markdown content will be inserted here -->
+            </div>
+        </div>
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
+        <!-- CTF 4 -->
+        <div class="ctf">
+            <div class="ctf-header">
+                <h3>CTF 4</h3>
+                <div class="technologies">SQLMap, John the Ripper</div>
+            </div>
+            <div class="ctf-content" id="ctf4-content">
+                <!-- The markdown content will be inserted here -->
+            </div>
+        </div>
 
-header nav ul li a:hover {
-    color: #ff6700;
-}
+        <!-- CTF 5 -->
+        <div class="ctf">
+            <div class="ctf-header">
+                <h3>CTF 5</h3>
+                <div class="technologies">GDB, Ghidra</div>
+            </div>
+            <div class="ctf-content" id="ctf5-content">
+                <!-- The markdown content will be inserted here -->
+            </div>
+        </div>
+    </section>
 
-/* CTF Writeups Section */
-.ctf-writeups {
-    padding: 20px;
-    background: #11144c;
-    text-align: center;
-}
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Zakaria's Portfolio | All Rights Reserved</p>
+    </footer>
 
-.ctf-writeups h2 {
-    margin-bottom: 20px;
-}
+    <!-- JavaScript -->
+    <script>
+        document.querySelectorAll('.ctf-header').forEach(ctf => {
+            ctf.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null; // Collapse
+                    content.style.opacity = "0";    // Fade out
+                    content.style.visibility = "hidden";  // Hide visibility
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px"; // Expand
+                    content.style.opacity = "1";    // Fade in
+                    content.style.visibility = "visible";  // Show visibility
+                }
+            });
+        });
 
-/* CTF Container */
-.ctf {
-    background: #1e2152;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    text-align: left;
-    cursor: pointer;
-    margin: 0 auto 20px auto;
-    width: 80%;
-}
+        // Function to fetch and render markdown content
+        function loadMarkdownContent(mdFile, elementId) {
+            fetch(mdFile)
+                .then(response => response.text())
+                .then(markdown => {
+                    const contentElement = document.getElementById(elementId);
+                    contentElement.innerHTML = marked.parse(markdown);
+                })
+                .catch(error => console.error('Error fetching markdown:', error));
+        }
 
-/* CTF Header Styling */
-.ctf-header {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-}
-
-/* CTF Content Styling */
-.ctf-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0;
-    background: #000;
-    transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
-    text-align: center;
-    margin: 0 auto;
-    width: calc(100% - 40px);
-    box-sizing: border-box;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.ctf-content.show {
-    max-height: 500px;
-    padding: 20px;
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Markdown Content Styling */
-.ctf-content p, .ctf-content pre, .ctf-content code {
-    text-align: left;
-    margin-left: 0;
-    padding-left: 0;
-    color: #fff;
-}
-
-/* Footer Styling */
-footer {
-    background: #1e2152;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: auto;
-}
+        // Load markdown files for each CTF content div
+        loadMarkdownContent('ctf1.md', 'ctf1-content');
+        loadMarkdownContent('ctf2.md', 'ctf2-content');
+        loadMarkdownContent('ctf3.md', 'ctf3-content');
+        loadMarkdownContent('ctf4.md', 'ctf4-content');
+        loadMarkdownContent('ctf5.md', 'ctf5-content');
+    </script>
+</body>
+</html>
