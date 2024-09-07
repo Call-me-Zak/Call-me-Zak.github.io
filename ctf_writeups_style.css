@@ -90,7 +90,7 @@ header nav ul li a:hover {
     max-height: 0;
     max-width: 100%;
     overflow: hidden;
-    padding: 20px; /* Added padding */
+    padding: 0; /* removed padding */
     word-wrap: break-word;
     background: #000;
     transition: max-height 0.3s ease, padding 0.3s ease;
@@ -98,12 +98,16 @@ header nav ul li a:hover {
     margin: 0 auto; /* Center the content block */
     width: calc(100% - 40px); /* Adjust width to accommodate padding */
     box-sizing: border-box; /* Ensure padding is included in the width */
+    opacity: 0; /* hide content initially */
+    visibility: hidden; /* new */
 }
 
 /* Expanded Content */
 .ctf-content.show {
     max-height: 500px;
     padding: 20px;
+    opacity: 1;
+    visibility: visible; 
 }
 
 .ctf-content img {
