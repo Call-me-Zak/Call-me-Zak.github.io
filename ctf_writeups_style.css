@@ -37,7 +37,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 10px;
+    margin: 0 15px; /* Increased margin between links from 10 to 15 */
 }
 
 header nav ul li a {
@@ -84,10 +84,14 @@ header nav ul li a:hover {
     cursor: pointer; /* Indicate clickable header */
 }
 
+/* added max-width and word-wrap, modified padding */
+
 .ctf-content {
     max-height: 0;
+    max-width: 100%; /* ensure content is within container */
     overflow: hidden;
-    padding: 0 20px; /* Padding will be added during expansion */
+    padding: 20px; /* new : removed 0 and left 20px, consistent padding for readability, old : 0 20px >> Padding will be added during expansion */
+    word-wrap: break-word; /* break long words */
     background: #000;
     transition: max-height 0.3s ease, padding 0.3s ease;
     text-align: left; /* Ensure the text inside is left-aligned for readability */
@@ -98,8 +102,14 @@ header nav ul li a:hover {
     margin: 0 auto; /* Center the container within the parent */
 }
 
-/* Matrix Effect */
-.ctf::before {
+/* new */
+.ctf-content img{
+    max-width: 100%; /* ensure images don't overflow */
+    height: auto;
+}
+
+/* Matrix Effect- chaged .ctf to .ctf-header to apply the effect to the header only */
+.ctf-header::before {
     content: ' ';
     position: absolute;
     top: 0;
@@ -120,7 +130,8 @@ header nav ul li a:hover {
     animation: matrix 1s infinite;
 }
 
-.ctf:hover::before {
+/* same thing here, changed .ctf to .ctf-header */
+.ctf-header:hover::before {
     opacity: 1;
 }
 
@@ -154,7 +165,7 @@ footer {
     padding: 20px;
     position: relative;
     z-index: 1;
-    margin-top: auto;
+    margin-top: 40px; /* changed from auto to 40 to prevent overlap */
 }
 
 .ctf-content p {
