@@ -99,7 +99,7 @@ header nav ul li a:hover {
     width: calc(100% - 40px); /* Adjust width to accommodate padding */
     box-sizing: border-box; /* Ensure padding is included in the width */
     opacity: 0; /* hide content initially */
-    visibility: hidden; /* new */
+    
 }
 
 /* Expanded Content */
