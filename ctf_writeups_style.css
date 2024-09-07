@@ -145,4 +145,19 @@ header nav ul li a:hover {
 }
 
 .ctf:hover {
-    background: rgba(50, 205, 50, 0.
+    background: rgba(50, 205, 50, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer Styling */
+footer {
+    background: #1e2152;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
