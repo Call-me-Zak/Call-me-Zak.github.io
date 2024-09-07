@@ -1,4 +1,4 @@
-# CTF Writeup for Fawn on HTB platform
+## CTF Writeup for Fawn on HTB platform
 
 ### Briefing:
 This is a CTF writeup done in a sandbox provided by HTB platform. The vulnerable VM is provided by HTB.
