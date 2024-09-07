@@ -87,6 +87,9 @@ header nav ul li a:hover {
     align-items: center;
     cursor: pointer;
     position: relative;
+    /* added these */
+    background: rgba(30, 33, 82, 0.7); /* Background of header */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* CTF Content Styling */
@@ -134,6 +137,19 @@ header nav ul li a:hover {
 /* You can also control the max-width */
 .ctf-content h1 {
     max-width: 100%; /* Ensure it uses the full width of the container */
+}
+
+/* new */
+/* Glow effect limited to the header on hover */
+.ctf-header:hover {
+    background: rgba(50, 255, 50, 0.8); /* Lime green background on hover */
+    box-shadow: 0 0 15px rgba(50, 255, 50, 0.8); /* Glow effect */
+}
+
+/* Ensure the rest of the CTF container does not inherit hover styles */
+.ctf:hover {
+    transform: none; /* No scale or other effects */
+    box-shadow: none;
 }
 
 /* Footer Styling */
