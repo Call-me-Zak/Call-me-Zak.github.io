@@ -94,9 +94,10 @@ header nav ul li a:hover {
     word-wrap: break-word;
     background: #000;
     transition: max-height 0.3s ease, padding 0.3s ease;
-    text-align: left;
-    margin: auto; /* Center the content */
+    text-align: center; /* Center text inside the content */
+    margin: 0 auto; /* Center the content block */
     width: calc(100% - 40px); /* Adjust width to accommodate padding */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 /* Expanded Content */
@@ -168,8 +169,10 @@ footer {
 .ctf-content p {
     margin-left: 0; /* Remove left margin */
     padding-left: 0; /* Remove left padding */
+    text-align: center; /* Center text within paragraphs */
 }
 
 .ctf-content pre, .ctf-content code {
     margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center text within code blocks */
 }
