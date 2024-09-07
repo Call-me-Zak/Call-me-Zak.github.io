@@ -90,12 +90,14 @@ header nav ul li a:hover {
     max-height: 0;
     max-width: 100%;
     overflow: hidden;
-    padding: 0 20px; /* Start with no padding, add padding on expansion */
+    padding: 20px; /* new : removed 0, Start with no padding, add padding on expansion */
     word-wrap: break-word;
     background: #000;
     transition: max-height 0.3s ease, padding 0.3s ease;
     text-align: left;
-    margin: 0 auto;
+    margin: 0 auto; /* center the content */
+    width: calc(100% - 40px); /* adjust width to accomodate padding */
+    box-sizing: border-box; /* ensure padding is included in width */
 }
 
 /* Expanded Content */
