@@ -29,6 +29,7 @@ body {
 }
 
 /* Header Styling */
+
 header {
     background: rgba(30, 33, 82, 0.7);
     padding: 15px 0;
@@ -44,7 +45,7 @@ header nav ul {
     align-items: center;
     padding: 0;
     margin: 0;
-    width: auto;
+  
 }
 
 header nav ul li {
