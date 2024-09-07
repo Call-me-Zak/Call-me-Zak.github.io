@@ -135,7 +135,7 @@ header nav ul li a:hover {
     opacity: 0; /* Hide the matrix effect initially */
     transition: opacity 0.3s ease;
     pointer-events: none;
-    z-index: 1; /* Matrix effect is below the content */
+    z-index: -1; /* Ensure matrix effect is below the content */
     animation: matrix 1s infinite;
 }
 
