@@ -60,6 +60,7 @@ header nav ul li a:hover {
 
 .ctf-writeups h2 {
     margin-bottom: 20px;
+    color: lime; /* Lime green color */
 }
 
 /* CTF Container */
@@ -111,7 +112,7 @@ header nav ul li a:hover {
 
 /* Markdown Content Styling */
 .ctf-content p, .ctf-content pre, .ctf-content code {
-    text-align: center, justify;
+    text-align: center; /* Center text inside these elements */
     margin-left: 0;
     padding-left: 0;
     color: #fff;
@@ -122,6 +123,7 @@ header nav ul li a:hover {
 .ctf-content h2,
 .ctf-content h3 {
     text-align: center; /* Center the title */
+    color: lime; /* Lime green color */
     white-space: nowrap; /* Prevent breaking the line */
     overflow: hidden; /* Prevent overflow of the title */
     text-overflow: ellipsis; /* Optional: add an ellipsis if the title overflows */
