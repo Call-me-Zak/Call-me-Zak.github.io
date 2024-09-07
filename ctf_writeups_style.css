@@ -117,6 +117,21 @@ header nav ul li a:hover {
     color: #fff;
 }
 
+/* Center and prevent line breaks for h1, h2, etc. */
+.ctf-content h1,
+.ctf-content h2,
+.ctf-content h3 {
+    text-align: center; /* Center the title */
+    white-space: nowrap; /* Prevent breaking the line */
+    overflow: hidden; /* Prevent overflow of the title */
+    text-overflow: ellipsis; /* Optional: add an ellipsis if the title overflows */
+}
+
+/* You can also control the max-width */
+.ctf-content h1 {
+    max-width: 100%; /* Ensure it uses the full width of the container */
+}
+
 /* Footer Styling */
 footer {
     background: #1e2152;
