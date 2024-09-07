@@ -129,17 +129,26 @@ header nav ul li a:hover {
 }
 
 /* Markdown Content Styling */
-.ctf-content p, .ctf-content code {
+.ctf-content p {
     text-align: center; /* Center text inside these elements */
     margin-left: 0;
     padding-left: 0;
     color: #fff;
 }
 
+.ctf-content code {
+    background-color: limegreen; /* Lime green background */
+    color: black; /* Black text color */
+    font-weight: bold; /* Bold text */
+    padding: 2px 4px; /* Padding to make the code more readable */
+    border-radius: 4px; /* Optional: rounded corners */
+}
+
 .ctf-content pre {
     background-color: #ccffcc; /* #f0f0f0; Light grey background */
     padding: 10px; /* Add some padding */
     border-radius: 5px; /* Rounded corners */
+    color: black; /* black text color */
 }
 
 /* Center and prevent line breaks for h1, h2, etc. */
