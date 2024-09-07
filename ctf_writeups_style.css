@@ -137,7 +137,7 @@ header nav ul li a:hover {
 }
 
 .ctf-content pre {
-    background-color: #f0f0f0; /* Light grey background */
+    background-color: #ccffcc; /* #f0f0f0; Light grey background */
     padding: 10px; /* Add some padding */
     border-radius: 5px; /* Rounded corners */
 }
