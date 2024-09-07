@@ -28,21 +28,16 @@ header {
     z-index: 1;
 }
 
-header nav {
-    margin: 0;
-    padding: 0;
-}
-
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 0; /* Reset padding */
-    margin: 0; /* Reset margin */
+    padding: 0;
+    margin: 0;
 }
 
 header nav ul li {
-    margin: 15px; /* Increased margin between links from 10 to 15 */
+    margin: 15px;
 }
 
 header nav ul li a {
@@ -88,24 +83,24 @@ header nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    position: relative; /* Important for the matrix effect */
+    position: relative;
 }
 
 /* CTF Content Styling */
 .ctf-content {
     max-height: 0;
     overflow: hidden;
-    padding: 0; /* Removed padding */
+    padding: 0;
     background: #000;
     transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
-    text-align: center; /* Center text inside the content */
-    margin: 0 auto; /* Center the content block */
-    width: calc(100% - 40px); /* Adjust width to accommodate padding */
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    opacity: 0; /* Hide content initially */
-    visibility: hidden; /* Hide content initially */
-    position: relative; /* Ensure content is above matrix effect */
-    z-index: 2; /* Ensure content is above matrix effect */
+    text-align: left;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    z-index: 2;
 }
 
 /* Expanded Content */
@@ -113,46 +108,68 @@ header nav ul li a:hover {
     max-height: 500px;
     padding: 20px;
     opacity: 1;
-    visibility: visible; /* Ensure content is visible */
+    visibility: visible;
 }
 
-/* Ensure Content Is Not Covered by Matrix Effect */
-.ctf-content img {
-    max-width: 100%;
-    height: auto;
+/* Headings inside CTF Content */
+.ctf-content h1, .ctf-content h2, .ctf-content h3, .ctf-content h4 {
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Lists inside CTF Content */
+.ctf-content ul, .ctf-content ol {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+/* Code blocks and inline code */
+.ctf-content pre {
+    background: #333;
+    color: #00FF00;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.ctf-content code {
+    background: #222;
+    padding: 5px;
+    border-radius: 4px;
+    color: #00FF00;
 }
 
 /* Matrix Effect for CTF Headers */
 .ctf-header::before {
-    content: ''; /* No content for pseudo-element */
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Slight transparency */
-    color: #00FF00; /* Bright green */
+    background: rgba(0, 0, 0, 0.3);
+    color: #00FF00;
     font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(20, 1fr);
-    opacity: 0; /* Hide the matrix effect initially */
+    opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
-    z-index: -1; /* Ensure matrix effect is below the content */
+    z-index: -1;
     animation: matrix 1s infinite;
 }
 
 /* Hover Effect on CTF Header */
 .ctf-header:hover::before {
-    opacity: 1; /* Show matrix effect on hover */
+    opacity: 1;
 }
 
 .ctf:hover {
-    background: #1e2152; /* Keep background color same */
+    background: #1e2152;
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(50, 205, 50, 0.5); /* Adjust shadow to match content visibility */
+    box-shadow: 0 10px 20px rgba(50, 205, 50, 0.5);
 }
 
 @keyframes matrix {
@@ -174,19 +191,4 @@ footer {
     bottom: 0;
     width: 100%;
     margin-top: auto;
-}
-
-/* Fix Left Margin/Padding for Content */
-.ctf-content p {
-    margin-left: 0; /* Remove left margin */
-    padding-left: 0; /* Remove left padding */
-    text-align: center; /* Center text within paragraphs */
-    word-wrap: break-word;
-}
-
-.ctf-content pre, .ctf-content code {
-    margin-left: 0; /* Remove left margin */
-    text-align: center; /* Center text within code blocks */
-    word-wrap: break-word;
-    padding-left: 0; /* Remove left padding */
 }
