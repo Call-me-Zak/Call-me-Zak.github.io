@@ -4,7 +4,7 @@
 
 This is a CTF writeup done in a sandbox provided by HTB platform. Both instances of the virtual machines are provided by HTB.
 
-### Phase 0 : Accessing the sandbox on HTB
+### Accessing the sandbox on HTB
 
 Spin up a VM instance (follow HTB instructions)
 
@@ -19,11 +19,10 @@ Check if the connection to the other machine is properly established by using ``
 
 ![image](https://github.com/user-attachments/assets/7212fac2-c4e8-4d6a-8afa-a3babd267480)
 
-### Phase 01 : Enumeration
+### Enumeration
 
 In this phase we want to collect as many information on the other machine as possible. As the more we know the more we can increase the number of attack vectors along with the attack surface.
 
-##### nmap
 
 The tool we'll be using is ```nmap``` to scan for open ports : this tool will send requests to the other machine in hopes of getting a response, if there's a response then that port is open, to get a verbose output we'll be using the -V flag along with the -s service detection flag to determine the name and description of the service identified. And we'll be using sudo (SuperUserDO for elevated privileges)
 
@@ -47,7 +46,7 @@ After using different credentials, and getting to root/root, it worked out, matt
 
 ![image](https://github.com/user-attachments/assets/be3aa378-1e00-4048-851f-6e2e9e4d2413)
 
-Navigate the directories either using ```dir``` or ```ls``` to list all directories available
+List all the directories & files either using ```dir``` or ```ls```
 
 ![image](https://github.com/user-attachments/assets/b04ac24a-eb28-490d-b16b-72dd237c25e3)
 
