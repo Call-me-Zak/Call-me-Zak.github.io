@@ -175,6 +175,7 @@ header nav ul li a:hover {
 .ctf-header:hover {
     background: rgba(50, 255, 50, 0.8); /* Lime green background on hover */
     box-shadow: 0 0 15px rgba(50, 255, 50, 0.8); /* Glow effect */
+    transform: scale(1.05); /* Slightly enlarge the header */
 }
 
 /* Ensure the rest of the CTF container does not inherit hover styles */
@@ -184,7 +185,7 @@ header nav ul li a:hover {
 }
 
 /* Matrix Effect */
-.ctf::before {
+.ctf-header::before {
     content: ' ';
     position: absolute;
     top: 0;
@@ -203,6 +204,10 @@ header nav ul li a:hover {
     pointer-events: none;
     z-index: 1;
     animation: matrix 1s infinite;
+}
+
+.ctf-header:hover::before {
+    opacity: 1; /* show matrix effect on hover */
 }
 
 @keyframes matrix {
