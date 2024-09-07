@@ -3,7 +3,7 @@
 ### Briefing
 In this CTF we'll be tackling Server Message Block (SMB) a file & printer sharing protocole you can think of it as a less secure version of Secure File Transfer Protocole (SFTP) which uses port 22 and built on (SSH2).
 
-#### Recon
+### Phase 01 : Enumeration
 As always after connecting to the Virtual Machine on HTB platform, we can go ahead and scan for opern ports using nmap.
 
 ```sudo nmap -sV <ip_address_of_the_vm>```
@@ -13,6 +13,8 @@ this'll return the following output :
 ![image](https://github.com/user-attachments/assets/78c6d8b2-acef-4cff-b433-46a2c6c5b99d)
 
 A simple google search would show that for modern contemporary systems SMB uses port 445 and in legacy systems uses port 139.
+
+### Phase 02 : Probing the correct SMB port
 
 So we can easily verify which one is being used by trying to establish a connection by using the following command :
 
@@ -36,6 +38,8 @@ We're then prompted for a password, but since we don't know, we can go ahead and
 ![image](https://github.com/user-attachments/assets/b6d09cb0-77d0-4c21-b182-8420199d58e7)
 
 We can see 04 shares:
+
+### Phase 03 : Accessing the shares
 
 WorkShares being a custom share as it doesn't end with the "$" symbol.
 So we can try to directly access that share by using the following command:
