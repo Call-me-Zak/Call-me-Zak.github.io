@@ -131,6 +131,7 @@ header nav ul li a:hover {
     white-space: nowrap; /* Prevent breaking the line */
     overflow: hidden; /* Prevent overflow of the title */
     text-overflow: ellipsis; /* Optional: add an ellipsis if the title overflows */
+    margin: 0 auto; /* ensure it's centered within its container */
 }
 
 /* You can also control the max-width */
