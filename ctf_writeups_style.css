@@ -36,7 +36,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 15px; /* Increased margin between links from 10 to 15 */
+    margin: 15px; /* Increased margin between links from 10 to 15 */
 }
 
 header nav ul li a {
