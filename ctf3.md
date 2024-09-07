@@ -1,5 +1,6 @@
 ## CTF Write Up for DANCING on HTB platform
 
+
 ### Briefing
 In this CTF we'll be tackling Server Message Block (SMB) a file & printer sharing protocole you can think of it as a less secure version of Secure File Transfer Protocole (SFTP) which uses port 22 and built on (SSH2).
 
