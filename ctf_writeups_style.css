@@ -37,7 +37,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 15px;
+    margin: 0 15px;
 }
 
 header nav ul li a {
@@ -62,6 +62,7 @@ header nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+/* CTF Container */
 .ctf {
     background: #1e2152;
     border-radius: 15px;
@@ -93,17 +94,14 @@ header nav ul li a:hover {
     padding: 0;
     background: #000;
     transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
-    text-align: left;
+    text-align: center;
     margin: 0 auto;
     width: calc(100% - 40px);
     box-sizing: border-box;
     opacity: 0;
     visibility: hidden;
-    position: relative;
-    z-index: 2;
 }
 
-/* Expanded Content */
 .ctf-content.show {
     max-height: 500px;
     padding: 20px;
@@ -111,74 +109,12 @@ header nav ul li a:hover {
     visibility: visible;
 }
 
-/* Headings inside CTF Content */
-.ctf-content h1, .ctf-content h2, .ctf-content h3, .ctf-content h4 {
-    margin: 20px 0;
-    font-weight: bold;
-}
-
-/* Lists inside CTF Content */
-.ctf-content ul, .ctf-content ol {
-    margin-left: 20px;
-    padding-left: 20px;
-}
-
-/* Code blocks and inline code */
-.ctf-content pre {
-    background: #333;
-    color: #00FF00;
-    padding: 15px;
-    border-radius: 8px;
-    overflow-x: auto;
-}
-
-.ctf-content code {
-    background: #222;
-    padding: 5px;
-    border-radius: 4px;
-    color: #00FF00;
-}
-
-/* Matrix Effect for CTF Headers */
-.ctf-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    color: #00FF00;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2em;
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: repeat(20, 1fr);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    z-index: -1;
-    animation: matrix 1s infinite;
-}
-
-/* Hover Effect on CTF Header */
-.ctf-header:hover::before {
-    opacity: 1;
-}
-
-.ctf:hover {
-    background: #1e2152;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(50, 205, 50, 0.5);
-}
-
-@keyframes matrix {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(100%);
-    }
+/* Markdown Content Styling */
+.ctf-content p, .ctf-content pre, .ctf-content code {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+    color: #fff;
 }
 
 /* Footer Styling */
