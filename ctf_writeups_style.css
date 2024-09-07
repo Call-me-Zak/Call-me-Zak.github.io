@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Body Styling */
@@ -89,13 +90,13 @@ header nav ul li a:hover {
     max-height: 0;
     max-width: 100%;
     overflow: hidden;
-    padding: 20px; /* new : removed 0, Start with no padding, add padding on expansion */
+    padding: 20px; /* Added padding */
     word-wrap: break-word;
     background: #000;
     transition: max-height 0.3s ease, padding 0.3s ease;
     text-align: left;
-    margin: auto; /* center the content */
-    width: calc(100% - 40px); /* adjust width to accomodate padding */
+    margin: auto; /* Center the content */
+    width: calc(100% - 40px); /* Adjust width to accommodate padding */
 }
 
 /* Expanded Content */
@@ -111,14 +112,14 @@ header nav ul li a:hover {
 
 /* Matrix Effect for CTF Headers */
 .ctf-header::before {
-    content: ' ';
+    content: ''; /* No content for pseudo-element */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.3); /* Slight transparency */
-    color: #32CD32; /* Lively green */
+    color: #00FF00; /* Bright green */
     font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
     display: grid;
@@ -146,9 +147,9 @@ header nav ul li a:hover {
 }
 
 .ctf:hover {
-    background: rgba(50, 205, 50, 0.4); /* More vivid green with less transparency */
+    background: rgba(50, 205, 50, 0.8); /* More vivid green with increased opacity */
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(50, 205, 50, 0.5);
+    box-shadow: 0 10px 20px rgba(50, 205, 50, 0.8); /* Increased shadow opacity */
 }
 
 /* Footer Styling */
@@ -165,11 +166,10 @@ footer {
 
 /* Fix Left Margin/Padding for Content */
 .ctf-content p {
-    margin-left: 20px; /* Add margin to avoid text touching the edges */
-    padding-left: 10px;
+    margin-left: 0; /* Remove left margin */
+    padding-left: 0; /* Remove left padding */
 }
 
 .ctf-content pre, .ctf-content code {
-    margin-left: 20px; /* For code blocks, add margin as well */
+    margin-left: 0; /* Remove left margin */
 }
-
