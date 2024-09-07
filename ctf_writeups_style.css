@@ -21,6 +21,7 @@ body {
 
 /* Header Styling */
 header {
+    border: 1px solid red; /* For debugging */
     background: rgba(30, 33, 82, 0.7);
     padding: 15px 0;
     text-align: center;
@@ -29,6 +30,7 @@ header {
 }
 
 header nav ul {
+    border: 1px solid green; /* For debugging */
     list-style: none;
     display: flex;
     justify-content: center;
@@ -37,8 +39,10 @@ header nav ul {
 }
 
 header nav ul li {
+    border: 1px solid blue; /* For debugging */
     margin: 0 25px;
 }
+
 
 header nav ul li a {
     color: #fff;
