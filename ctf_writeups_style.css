@@ -56,7 +56,7 @@ header nav ul li a:hover {
     padding: 20px;
     background: #11144c;
     text-align: center;
-    }
+}
 
 .ctf-writeups h2 {
     margin-bottom: 20px;
@@ -72,8 +72,8 @@ header nav ul li a:hover {
     position: relative;
     text-align: left;
     cursor: pointer;
-    margin: 0 auto 20px auto; /* center containers with margins */
-    width: 80%
+    margin: 0 auto 20px auto; /* Center containers with margins */
+    width: 80%;
 }
 
 .ctf-header {
@@ -84,37 +84,31 @@ header nav ul li a:hover {
     cursor: pointer; /* Indicate clickable header */
 }
 
-/* added max-width and word-wrap, modified padding */
-
+/* CTF Content Styling */
 .ctf-content {
     max-height: 0;
-    max-width: 100%; /* ensure content is within container */
+    max-width: 100%;
     overflow: hidden;
-    padding: 20px; /* new : removed 0 and left 20px, consistent padding for readability, old : 0 20px >> Padding will be added during expansion */
-    word-wrap: break-word; /* break long words */
+    padding: 0 20px; /* Start with no padding, add padding on expansion */
+    word-wrap: break-word;
     background: #000;
     transition: max-height 0.3s ease, padding 0.3s ease;
-    text-align: left; /* Ensure the text inside is left-aligned for readability */
-    display: block; /* old was set to flex :Flexbox to center content */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    margin: 0 auto; /* Center the container within the parent */
+    text-align: left;
+    margin: 0 auto;
 }
 
-/ * new */
-.ctf-content.show{
+/* Expanded Content */
+.ctf-content.show {
     max-height: 500px;
     padding: 20px;
 }
 
-/* new */
-.ctf-content img{
-    max-width: 100%; /* ensure images don't overflow */
+.ctf-content img {
+    max-width: 100%;
     height: auto;
 }
 
-/* Matrix Effect- chaged .ctf to .ctf-header to apply the effect to the header only */
+/* Matrix Effect for CTF Headers */
 .ctf-header::before {
     content: ' ';
     position: absolute;
@@ -136,7 +130,7 @@ header nav ul li a:hover {
     animation: matrix 1s infinite;
 }
 
-/* same thing here, changed .ctf to .ctf-header */
+/* Hover Effect on CTF Header */
 .ctf-header:hover::before {
     opacity: 1;
 }
@@ -151,66 +145,4 @@ header nav ul li a:hover {
 }
 
 .ctf:hover {
-    background: rgba(50, 205, 50, 0.6); /* Lime green with high intensity */
-    color: #fff;
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(50, 205, 50, 0.5); /* Extended light effect with lime green shadow */
-}
-
-.technologies {
-    font-size: 16px;
-    color: #bbb;
-    text-align: right;
-}
-
-/* Footer */
-footer {
-    background: rgba(30, 33, 82, 0.7);
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
-    margin-top: 40px; /* changed from auto to 40 to prevent overlap */
-}
-
-.ctf-content p {
-    color: #ffffff; /* Text color */
-    margin-bottom: 15px; /* Space between paragraphs */
-    line-height: 1.6; /* Improve readability */
-    max-width: 600px; /* Limit the width of paragraphs */
-}
-
-.ctf-content pre {
-    background-color: #333;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto; /* Scroll horizontally if needed */
-}
-
-.ctf-content code {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #222;
-    padding: 3px 5px;
-    border-radius: 3px;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .ctf {
-        width: 95%; /* Expand to more width on smaller screens */
-    }
-/* new, added for consistency : padding and word-wrap */
-    
-    .ctf-content {
-        max-width: 100%; /* Full width on smaller devices */
-        padding: 20px; /* ensure consistent padding */
-        word-wrap: break-word;
-    }
-
-    /*new */
-    .ctf-content img {
-        max-width: 100% /* ensure images don't overflow */
-        height: auto;
-    }
-}
+    background: rgba(50, 205, 50, 0.
