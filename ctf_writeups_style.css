@@ -40,15 +40,15 @@ header {
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-between; /* Adjusted for more compact spacing */
+    justify-content: center; /* Adjusted for more compact spacing */
     align-items: center;
     padding: 0;
     margin: 0;
-    width: 100%;
+    width: auto;
 }
 
 header nav ul li {
-    margin: 0 5px; /* Reduced margin */
+    margin: 0 10px; /* Reduced margin */
 }
 
 header nav ul li a {
