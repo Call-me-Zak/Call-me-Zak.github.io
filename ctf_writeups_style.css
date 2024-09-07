@@ -91,7 +91,7 @@ header nav ul li a:hover {
     overflow: hidden;
     padding: 0; /* Removed padding */
     background: #000;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+    transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
     text-align: center; /* Center text inside the content */
     margin: 0 auto; /* Center the content block */
     width: calc(100% - 40px); /* Adjust width to accommodate padding */
@@ -110,6 +110,7 @@ header nav ul li a:hover {
     visibility: visible; /* Ensure content is visible */
 }
 
+/* Ensure images within the content are displayed correctly */
 .ctf-content img {
     max-width: 100%;
     height: auto;
