@@ -184,9 +184,7 @@ header nav ul li a:hover {
 }
 
 /* Matrix Effect */
-.header h1::before,
-.header h2::before,
-.header h3::before {
+.ctf::before {
     content: ' ';
     position: absolute;
     top: 0;
