@@ -17,6 +17,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center items horizontally */
 }
 
 /* Header Styling */
@@ -26,8 +27,10 @@ header {
     text-align: center;
     position: relative;
     z-index: 1;
+    width: 100%;
 }
 
+/* Navigation Styling */
 header nav ul {
     list-style: none;
     display: flex;
@@ -56,10 +59,7 @@ header nav ul li a:hover {
     padding: 20px;
     background: #11144c;
     text-align: center;
-}
-
-.ctf-writeups h2 {
-    margin-bottom: 20px;
+    width: 100%;
 }
 
 /* CTF Container */
@@ -73,15 +73,15 @@ header nav ul li a:hover {
     position: relative;
     text-align: center;
     cursor: pointer;
-    margin: 0 auto 20px auto;
     width: 80%;
+    max-width: 1200px; /* Limit maximum width if needed */
 }
 
 /* CTF Header Styling */
 .ctf-header {
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center items horizontally */
     align-items: center;
     cursor: pointer;
     position: relative;
@@ -102,6 +102,7 @@ header nav ul li a:hover {
     visibility: hidden;
 }
 
+/* Show class for CTF content */
 .ctf-content.show {
     max-height: 500px;
     padding: 20px;
@@ -111,7 +112,7 @@ header nav ul li a:hover {
 
 /* Markdown Content Styling */
 .ctf-content p, .ctf-content pre, .ctf-content code {
-    text-align: center, justify;
+    text-align: center; /* Center text inside these elements */
     margin-left: 0;
     padding-left: 0;
     color: #fff;
