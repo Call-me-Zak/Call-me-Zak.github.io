@@ -194,8 +194,17 @@ footer {
     .ctf {
         width: 95%; /* Expand to more width on smaller screens */
     }
-
+/* new, added for consistency : padding and word-wrap */
+    
     .ctf-content {
         max-width: 100%; /* Full width on smaller devices */
+        padding: 20px; /* ensure consistent padding */
+        word-wrap: break-word;
+    }
+
+    /*new */
+    .ctf-content img {
+        max-width: 100% /* ensure images don't overflow */
+        height: auto;
     }
 }
