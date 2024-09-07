@@ -96,7 +96,7 @@ header nav ul li a:hover {
     transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
     text-align: center;
     margin: 0 auto;
-    width: calc(100% - 40px);
+    width: 100%;
     box-sizing: border-box;
     opacity: 0;
     visibility: hidden;
