@@ -86,7 +86,12 @@ header nav ul li a:hover {
 }
 
 /* CTF Content Styling */
-.ctf-content {
+.ctf-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     max-height: 0;
     max-width: 100%;
     overflow: hidden;
@@ -96,9 +101,10 @@ header nav ul li a:hover {
     transition: max-height 0.3s ease, padding 0.3s ease;
     text-align: center; /* Center text inside the content */
     margin: 0 auto; /* Center the content block */
-    width: calc(100% - 40px); /* Adjust width to accommodate padding */
+    width: 100%; /* Adjust width to accommodate padding */
     box-sizing: border-box; /* Ensure padding is included in the width */
     opacity: 0; /* hide content initially */
+    animation: matrix 1s infinite;
     
 }
 
@@ -170,13 +176,13 @@ footer {
 }
 
 /* Fix Left Margin/Padding for Content */
-.ctf-content p {
+.ctf-header::before p {
     margin-left: 0; /* Remove left margin */
     padding-left: 0; /* Remove left padding */
     text-align: center; /* Center text within paragraphs */
 }
 
-.ctf-content pre, .ctf-content code {
+.ctf-header::before pre, .ctf-header::before code {
     margin-left: 0; /* Remove left margin */
     text-align: center; /* Center text within code blocks */
 }
