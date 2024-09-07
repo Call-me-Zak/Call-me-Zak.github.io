@@ -152,14 +152,14 @@ header nav ul li a:hover {
     box-shadow: none;
 }
 
-/* Footer Styling */
+
+/* Footer */
 footer {
-    background: #1e2152;
-    color: white;
+    background: rgba(30, 33, 82, 0.7); /* Semi-transparent background */
+    color: #ffffff;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: auto;
+    z-index: 1; /* Ensure it is above other content */
+    margin-top: auto; /* Push footer to the bottom */
 }
