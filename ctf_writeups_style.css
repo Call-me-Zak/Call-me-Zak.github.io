@@ -179,7 +179,7 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 20px;
-    position: sticky;
+    position: relative;
     z-index: 1; /* Ensure it is above other content */
-    bottom: 0;
+    margin-top: auto; /* Push footer to the bottom */
 }
