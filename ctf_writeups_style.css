@@ -181,9 +181,12 @@ footer {
     margin-left: 0; /* Remove left margin */
     padding-left: 0; /* Remove left padding */
     text-align: center; /* Center text within paragraphs */
+    word-wrap: break-word;
 }
 
 .ctf-content pre, .ctf-content code {
     margin-left: 0; /* Remove left margin */
     text-align: center; /* Center text within code blocks */
+    word-wrap: break-word;
+    padding-left: 0; /* Remove left padding */
 }
