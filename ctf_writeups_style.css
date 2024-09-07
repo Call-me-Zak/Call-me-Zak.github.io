@@ -170,9 +170,8 @@ header nav ul li a:hover {
 
 /* Ensure the rest of the CTF container does not inherit hover styles */
 .ctf:hover {
-    transform: none; /* No scale or other effects */
-    box-shadow: none;
-}
+    transform: scale(1.05); /* Slightly enlarge the entire container */
+    box-shadow: 0 0 15px rgba(50, 255, 50, 0.8); /* Glow effect */
 
 /* Matrix Effect */
 .ctf-header::before {
