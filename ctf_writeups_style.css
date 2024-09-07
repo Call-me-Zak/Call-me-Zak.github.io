@@ -67,7 +67,7 @@ header nav ul li a:hover {
     border-radius: 15px;
     margin-bottom: 20px;
     overflow: hidden;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
     text-align: left;
@@ -76,6 +76,7 @@ header nav ul li a:hover {
     width: 80%;
 }
 
+/* Ensure .ctf-content is above the hover effect */
 .ctf-header {
     padding: 20px;
     display: flex;
@@ -91,7 +92,7 @@ header nav ul li a:hover {
     overflow: hidden;
     padding: 0; /* Removed padding */
     background: #000;
-    transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+    transition: max-height 0.3s ease, padding 0.3s ease;
     text-align: center; /* Center text inside the content */
     margin: 0 auto; /* Center the content block */
     width: calc(100% - 40px); /* Adjust width to accommodate padding */
@@ -110,7 +111,6 @@ header nav ul li a:hover {
     visibility: visible; /* Ensure content is visible */
 }
 
-/* Ensure images within the content are displayed correctly */
 .ctf-content img {
     max-width: 100%;
     height: auto;
@@ -139,6 +139,12 @@ header nav ul li a:hover {
 }
 
 /* Hover Effect on CTF Header */
+.ctf:hover {
+    background: #1e2152; /* Keep background color same */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(50, 205, 50, 0.5); /* Adjust shadow to match content visibility */
+}
+
 .ctf-header:hover::before {
     opacity: 1;
 }
@@ -150,12 +156,6 @@ header nav ul li a:hover {
     100% {
         transform: translateY(100%);
     }
-}
-
-.ctf:hover {
-    background: rgba(50, 205, 50, 0.8); /* More vivid green with increased opacity */
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(50, 205, 50, 0.8); /* Increased shadow opacity */
 }
 
 /* Footer Styling */
