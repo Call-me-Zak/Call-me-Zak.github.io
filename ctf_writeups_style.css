@@ -140,14 +140,14 @@ header nav ul li a:hover {
 }
 
 /* Hover Effect on CTF Header */
+.ctf-header:hover::before {
+    opacity: 1; /* Show matrix effect on hover */
+}
+
 .ctf:hover {
     background: #1e2152; /* Keep background color same */
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(50, 205, 50, 0.5); /* Adjust shadow to match content visibility */
-}
-
-.ctf-header:hover::before {
-    opacity: 1; /* Show matrix effect on hover */
 }
 
 @keyframes matrix {
