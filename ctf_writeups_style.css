@@ -95,11 +95,17 @@ header nav ul li a:hover {
     background: #000;
     transition: max-height 0.3s ease, padding 0.3s ease;
     text-align: left; /* Ensure the text inside is left-aligned for readability */
-    display: flex; /* Flexbox to center content */
+    display: block; /* old was set to flex :Flexbox to center content */
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
     margin: 0 auto; /* Center the container within the parent */
+}
+
+/ * new */
+.ctf-content.show{
+    max-height: 500px;
+    padding: 20px;
 }
 
 /* new */
