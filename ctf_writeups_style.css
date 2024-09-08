@@ -89,11 +89,24 @@ header nav ul li a:hover {
 
 /* CTF Header Styling */
 .ctf-header {
-    padding: 20px;
+    padding: 10px 20px;
     background: rgba(30, 33, 82, 0.7);
     transition: background 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     z-index: 2; /* Ensure it appears above content */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+}
+
+.ctf-header h3 {
+    margin: 0;
+    color: #00ff00; /* Lime green for the title */
+}
+
+.ctf-header .technologies {
+    color: #00ff00; /* Lime green for the technologies */
+    font-style: italic;
 }
 
 /* CTF Content Styling */
