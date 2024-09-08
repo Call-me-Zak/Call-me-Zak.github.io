@@ -46,7 +46,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 10px;
+    margin: 0 15px; /* Increase margin for better spacing */
 }
 
 header nav ul li a {
