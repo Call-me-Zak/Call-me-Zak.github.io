@@ -71,6 +71,13 @@ header nav ul li a:hover {
     max-width: 1200px; /* Center content and constrain width */
 }
 
+/* CTF Container */
+.ctf-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between containers */
+}
+
 /* CTF Card Styling */
 .ctf {
     background: #1e2152;
@@ -79,7 +86,6 @@ header nav ul li a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     position: relative;
     overflow: hidden;
-    margin-bottom: 20px; /* Ensures cards are stacked vertically */
 }
 
 /* Align CTF Header Elements */
@@ -88,12 +94,14 @@ header nav ul li a:hover {
     justify-content: space-between;
     cursor: pointer;
     margin-bottom: 15px; /* Space below header */
+    position: relative;
 }
 
 .ctf-header h3 {
     margin: 0; /* Remove margin for better alignment */
     font-size: 24px;
     color: #fff;
+    padding: 5px 0; /* Ensure consistent spacing from top and bottom */
 }
 
 .technologies {
@@ -140,6 +148,22 @@ header nav ul li a:hover {
     100% {
         transform: translateY(100%);
     }
+}
+
+/* Hover Zoom Effect */
+.ctf {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ctf:not(.expanded):hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+/* Expanded State */
+.ctf.expanded {
+    transform: scale(1);
+    box-shadow: none;
 }
 
 /* Footer */
