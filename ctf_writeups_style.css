@@ -167,6 +167,26 @@ header nav ul li a:hover {
     box-shadow: none;
 }
 
+/* Code Styling in CTF Content */
+.ctf-content code {
+    background-color: limegreen; /* Lime green background */
+    color: black; /* Black text color */
+    font-weight: bold; /* Bold text */
+    padding: 2px 4px; /* Padding to make the code more readable */
+    border-radius: 4px; /* Optional: rounded corners */
+}
+
+/* Code Block Styling in CTF Content */
+.ctf-content pre {
+    background-color: #ccffcc; /* Light grey background */
+    padding: 10px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+    color: black; /* Black text color */
+    font-family: monospace; /* Use monospace font for code */
+    overflow-x: auto; /* Ensure code blocks are scrollable if they exceed container width */
+}
+
+
 /* Footer */
 footer {
     background: rgba(30, 33, 82, 0.7);
