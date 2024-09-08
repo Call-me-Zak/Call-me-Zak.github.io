@@ -163,7 +163,7 @@ header nav ul li a:hover {
 
 /* Glow effect limited to the header on hover */
 .ctf:hover {
-    transform: scale(1.02); /* Slightly smaller scale to reduce excessive growth */
+    transform: scale(1.01); /* Slightly smaller scale to reduce excessive growth */
     box-shadow: 0 0 10px rgba(50, 255, 50, 0.8); /* Adjusted glow effect */
 }
 
