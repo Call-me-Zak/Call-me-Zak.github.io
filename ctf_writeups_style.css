@@ -217,6 +217,11 @@ header nav ul li a:hover {
     }
 }
 
+/* Main Content */
+main {
+    flex: 1; /* Allows main to grow and take available space */
+}
+
 /* Footer */
 footer {
     background: rgba(30, 33, 82, 0.7); /* Semi-transparent background */
