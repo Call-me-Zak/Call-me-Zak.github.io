@@ -60,6 +60,8 @@ header nav ul li a {
     font-size: 18px;
     font-weight: bold;
     padding: 10px 15px; /* Added padding to the <a> elements */
+    margin: 0 15px;
+    width: 3%;
 }
 
 header nav ul li a:hover {
@@ -103,18 +105,8 @@ header nav ul li a:hover {
     color: #d3d3d3;
 }
 
-/* Content Inside CTF Card */
-.ctf-content {
-    max-height: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-    background: #1e2152;
-}
-
-/* Matrix Effect on Hover */
-.ctf::before {
+/* Matrix Effect on Hover - Limited to ctf-header */
+.ctf-header::before {
     content: ' ';
     position: absolute;
     top: 0;
@@ -131,18 +123,23 @@ header nav ul li a:hover {
     animation: matrix-green 1s infinite;
 }
 
-.ctf:hover::before {
+.ctf-header:hover::before {
     opacity: 1;
 }
 
-/* Matrix Effect Animation */
-@keyframes matrix-green {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(100%);
-    }
+/* Content Inside CTF Card */
+.ctf-content {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    background: #1e2152;
+}
+
+/* Green color for paragraph titles (###) */
+.ctf-content h3 {
+    color: limegreen;
 }
 
 /* Hover Zoom Effect */
