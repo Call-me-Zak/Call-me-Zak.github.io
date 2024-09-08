@@ -111,7 +111,7 @@ header nav ul li a:hover {
 }
 
 .ctf-content.show {
-    max-height: none; /* new was 500px */
+    max-height: 500px; /* new was 500px */
     padding: 20px;
     opacity: 1;
     visibility: visible;
