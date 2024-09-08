@@ -108,6 +108,7 @@ header nav ul li a:hover {
     max-height: 0;
     opacity: 0;
     visibility: hidden;
+    overflow: hidden;
     transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     background: #1e2152;
     padding: 20px;
@@ -159,6 +160,8 @@ header nav ul li a:hover {
 .ctf.expanded {
     transform: scale(1);
     box-shadow: none;
+    opacity: 1; /* new */
+    visibility: visible; /* new */
 }
 
 /* Code Styling in CTF Content */
