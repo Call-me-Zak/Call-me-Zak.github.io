@@ -100,9 +100,9 @@ header nav ul li a:hover {
 .ctf-content {
     max-height: 0;
     overflow: hidden;
-    padding: 0;
+    padding: 10px;
     background: #000;
-    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+    transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
     text-align: center;
     margin: 0 auto;
     width: 100%;
