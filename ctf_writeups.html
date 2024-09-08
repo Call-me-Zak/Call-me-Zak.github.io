@@ -96,16 +96,29 @@
     <!-- JavaScript -->
     <script>
         document.querySelectorAll('.ctf-header').forEach(ctf => {
-            ctf.addEventListener('click', function () {
-                const content = this.nextElementSibling;
-                if (content.classList.contains('show')) {
-                    content.classList.remove('show'); // Collapse
-                } else {
-                    document.querySelectorAll('.ctf-content').forEach(ctfContent => ctfContent.classList.remove('show')); // Collapse all
-                    content.classList.add('show'); // Expand clicked content
-                }
-            });
+    ctf.addEventListener('click', function () {
+        const content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null; // Collapse
+            content.style.opacity = "0";    // Fade out
+            content.style.visibility = "hidden";  // Hide visibility
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px"; // Expand based on content height
+            content.style.opacity = "1";    // Fade in
+            content.style.visibility = "visible";  // Show visibility
+        }
+
+        // Close other open containers
+        document.querySelectorAll('.ctf-content').forEach(otherContent => {
+            if (otherContent !== content) {
+                otherContent.style.maxHeight = null;
+                otherContent.style.opacity = "0";
+                otherContent.style.visibility = "hidden";
+            }
         });
+    });
+});
+
 
         // Function to fetch and render markdown content
         function loadMarkdownContent(mdFile, elementId) {
