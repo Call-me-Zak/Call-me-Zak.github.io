@@ -91,6 +91,11 @@ header nav ul li a:hover {
     cursor: pointer;
     position: relative;
     align-items: center; /* Vertically center items */
+    /* new */
+    background-color: #1e2152;
+    border-radius: 15px; /* Ensure the glow effect is within the rounded corners */
+    transition: background-color 0.3s ease;
+}
 }
 
 .ctf-header h3 {
@@ -125,6 +130,11 @@ header nav ul li a:hover {
     opacity: 1;
 }
 
+/* Glow Effect on Hover */
+.ctf-header:hover {
+    background-color: rgba(0, 255, 0, 0.1); /* Green tint on hover */
+}
+
 /* Content Inside CTF Card */
 .ctf-content {
     max-height: 0;
@@ -132,7 +142,15 @@ header nav ul li a:hover {
     visibility: hidden;
     overflow: hidden;
     transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-    background: #1e2152;
+    color: white; /* Paragraphs in white */
+    padding: 15px; /* Padding for content */
+    border-radius: 0 0 15px 15px; /* Match card's rounded corners */
+}
+
+/* Paragraph Styling inside CTF Content */
+.ctf-content p {
+    color: white; /* White text for paragraphs */
+    margin: 10px 0;
 }
 
 /* Green color for paragraph titles (###) */
