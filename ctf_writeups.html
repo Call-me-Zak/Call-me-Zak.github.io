@@ -96,7 +96,7 @@
     <!-- JavaScript -->
     <script>
         document.querySelectorAll('.ctf-header').forEach(ctf => {
-    ctf.addEventListener('click', function () {
+        ctf.addEventListener('click', function () {
         const content = this.nextElementSibling;
         if (content.style.maxHeight) {
             content.style.maxHeight = null; // Collapse
@@ -114,10 +114,10 @@
                 otherContent.style.maxHeight = null;
                 otherContent.style.opacity = "0";
                 otherContent.style.visibility = "hidden";
-            }
+                    }    
+                });
+            });
         });
-    });
-});
 
 
         // Function to fetch and render markdown content
