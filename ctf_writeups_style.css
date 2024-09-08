@@ -191,5 +191,4 @@ footer {
     position: relative;
     z-index: 1;
     margin-top: auto; /* Push footer to the bottom */
-    width: 100%;
 }
