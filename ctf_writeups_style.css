@@ -50,7 +50,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 30px; /* This spacing can be adjusted to define space between the list items */
+    margin: 0 10px; /* Match the spacing from the main page */
 }
 
 header nav ul li a {
@@ -64,7 +64,6 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #ff6700;
 }
-
 
 /* CTF Writeups Section */
 .ctf-writeups {
