@@ -40,6 +40,7 @@ header {
     z-index: 1;
 }
 
+/* Header Navigation */
 header nav ul {
     list-style: none;
     display: flex;
@@ -49,7 +50,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 20px; /* Fixed spacing for consistency */
+    margin: 0 20px; /* This spacing can be adjusted to define space between the list items */
 }
 
 header nav ul li a {
@@ -57,11 +58,13 @@ header nav ul li a {
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    padding: 10px 15px; /* Added padding to the <a> elements */
 }
 
 header nav ul li a:hover {
     color: #ff6700;
 }
+
 
 /* CTF Writeups Section */
 .ctf-writeups {
