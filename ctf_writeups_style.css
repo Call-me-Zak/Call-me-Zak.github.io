@@ -89,6 +89,7 @@ header nav ul li a:hover {
     justify-content: space-between;
     cursor: pointer;
     position: relative;
+    align-items: center; /* Vertically center items */
 }
 
 .ctf-header h3 {
