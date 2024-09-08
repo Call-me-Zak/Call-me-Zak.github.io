@@ -67,7 +67,8 @@ header nav ul li a:hover {
 .ctf-writeups {
     padding: 20px;
     background: #11144c;
-    margin: 50px 0;
+    margin: 50px auto;
+    max-width: 1200px; /* Center content and constrain width */
 }
 
 /* CTF Card Styling */
@@ -81,14 +82,16 @@ header nav ul li a:hover {
     margin-bottom: 20px; /* Ensures cards are stacked vertically */
 }
 
+/* Align CTF Header Elements */
 .ctf-header {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    margin-bottom: 15px; /* Space below header */
 }
 
 .ctf-header h3 {
-    margin-bottom: 15px;
+    margin: 0; /* Remove margin for better alignment */
     font-size: 24px;
     color: #fff;
 }
@@ -97,6 +100,7 @@ header nav ul li a:hover {
     color: #d3d3d3;
 }
 
+/* Content Inside CTF Card */
 .ctf-content {
     max-height: 0;
     opacity: 0;
@@ -146,5 +150,5 @@ footer {
     padding: 20px;
     position: relative;
     z-index: 1;
-    margin-top: auto;
+    margin-top: auto; /* Push footer to the bottom */
 }
