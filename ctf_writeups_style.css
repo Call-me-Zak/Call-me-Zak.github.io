@@ -89,7 +89,7 @@ header nav ul li a:hover {
 
 /* CTF Header Styling */
 .ctf-header {
-    padding: 10px 20px;
+    padding: 5px 20px;
     background: rgba(30, 33, 82, 0.7);
     transition: background 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
