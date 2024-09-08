@@ -1,0 +1,170 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: black;
+}
+
+/* Background Video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header Navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: limegreen;
+}
+
+/* CTF Writeups Section */
+.ctf-writeups {
+    padding: 40px 20px;
+}
+
+.ctf-writeups h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: limegreen;
+}
+
+.ctf {
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid limegreen;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ctf-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    border: 1px solid limegreen;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ctf-header:hover {
+    background-color: limegreen;
+    color: black;
+}
+
+.ctf-header h3 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.ctf-header:hover h3 {
+    color: black;
+}
+
+.technologies {
+    font-size: 14px;
+    color: limegreen;
+}
+
+/* Zoom and Matrix Effect (Limited to Header) */
+.ctf-header:hover {
+    transform: scale(1.05);
+    background: rgba(0, 255, 0, 0.2);
+}
+
+/* Glowing effect on title */
+.ctf-header h3:hover {
+    text-shadow: 0px 0px 10px limegreen;
+}
+
+/* CTF Content */
+.ctf-content {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s;
+    padding: 0 10px;
+}
+
+/* Show class to handle expand/collapse */
+.ctf-content.show {
+    visibility: visible;
+    opacity: 1;
+    max-height: 500px; /* Adjust max-height depending on content */
+}
+
+.ctf-content p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Responsive Design for Small Screens */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .ctf {
+        padding: 15px;
+    }
+
+    .ctf-header h3 {
+        font-size: 20px;
+    }
+
+    .technologies {
+        font-size: 12px;
+    }
+}
+
