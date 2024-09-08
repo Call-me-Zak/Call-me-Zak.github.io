@@ -51,6 +51,7 @@ header nav ul {
 
 header nav ul li {
     margin: 0 10px; /* Match the spacing from the main page */
+    width: 2%;
 }
 
 header nav ul li a {
