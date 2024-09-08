@@ -1,0 +1,194 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0b0e34;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background Video Styling */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-1px) scale(1.5); /* Creates the parallax effect */
+}
+
+/* Header Styling */
+header {
+    background: rgba(30, 33, 82, 0.7); /* Removed the blue background */
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header Navigation */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 10px; /* Match the spacing from the main page */
+    width: 2%;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px; /* Added padding to the <a> elements */
+}
+
+header nav ul li a:hover {
+    color: #ff6700;
+}
+
+/* CTF Writeups Section */
+.ctf-writeups {
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 1200px; /* Center content and constrain width */
+}
+
+/* CTF Card Styling */
+.ctf {
+    background: #1e2152;
+    padding: 10px;
+    border-radius: 15px; /* Increased border radius for a more rounded look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px; /* Added margin to create space between containers */
+}
+
+/* Align CTF Header Elements */
+.ctf-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    align-items: center; /* Vertically center items */
+}
+
+.ctf-header h3 {
+    margin: 0; /* Remove margin for better alignment */
+    font-size: 20px;
+    color: #fff;
+}
+
+.technologies {
+    color: #d3d3d3;
+}
+
+/* Content Inside CTF Card */
+.ctf-content {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    background: #1e2152;
+}
+
+/* Matrix Effect on Hover */
+.ctf::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 255, 0, 0.5); /* Glow in green */
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    animation: matrix-green 1s infinite;
+}
+
+.ctf:hover::before {
+    opacity: 1;
+}
+
+/* Matrix Effect Animation */
+@keyframes matrix-green {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Hover Zoom Effect */
+.ctf {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ctf:not(.expanded):hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+/* Expanded State */
+.ctf.expanded {
+    transform: scale(1);
+    box-shadow: none;
+    opacity: 1; /* new */
+    visibility: visible; /* new */
+}
+
+/* Code Styling in CTF Content */
+.ctf-content code {
+    background-color: limegreen; /* Lime green background */
+    color: black; /* Black text color */
+    font-weight: bold; /* Bold text */
+    padding: 2px 4px; /* Padding to make the code more readable */
+    border-radius: 4px; /* Optional: rounded corners */
+}
+
+/* Code Block Styling in CTF Content */
+.ctf-content pre {
+    background-color: #ccffcc; /* Light grey background */
+    padding: 10px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+    color: black; /* Black text color */
+    font-family: monospace; /* Use monospace font for code */
+    overflow-x: auto; /* Ensure code blocks are scrollable if they exceed container width */
+}
+
+/* Footer */
+footer {
+    background: rgba(30, 33, 82, 0.7);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    margin-top: auto; /* Push footer to the bottom */
+}
