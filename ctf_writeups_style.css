@@ -135,6 +135,8 @@ header nav ul li a:hover {
 /* Glow Effect on Hover */
 .ctf-header:hover {
     background-color: rgba(0, 255, 0, 0.1); /* Green tint on hover */
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.5); /* Green glow shadow */
+}
 }
 
 /* Content Inside CTF Card */
