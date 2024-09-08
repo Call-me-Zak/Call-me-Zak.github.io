@@ -76,7 +76,7 @@ header nav ul li a:hover {
 /* CTF Card Styling */
 .ctf {
     background: #1e2152;
-    padding: 20px;
+    padding: 10px;
     border-radius: 15px; /* Increased border radius for a more rounded look */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -88,7 +88,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    margin-bottom: 15px; /* Space below header */
+    margin-bottom: 5px; /* Space below header */
     position: relative;
 }
 
