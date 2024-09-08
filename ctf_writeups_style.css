@@ -5,16 +5,21 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+/* Body Styling */
+body {
     font-family: 'Arial', sans-serif;
-    color: white;
-    background-color: black;
+    background-color: #0b0e34;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Background Video */
+/* Background Video Styling */
 .background-video {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -23,148 +28,193 @@ html, body {
     z-index: -1;
 }
 
-/* Header Navigation */
+/* Header Styling */
 header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    background: rgba(30, 33, 82, 0.7);
+    padding: 15px 0;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li {
-    display: inline;
+header nav ul li {
+    margin: 0 10px;
 }
 
-nav ul li a {
+header nav ul li a {
+    color: #ffffff;
     text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: limegreen;
+header nav ul li a:hover {
+    color: #ff6700;
 }
 
 /* CTF Writeups Section */
 .ctf-writeups {
-    padding: 40px 20px;
+    padding: 20px;
+    background: #11144c;
+    text-align: center;
 }
 
 .ctf-writeups h2 {
-    text-align: center;
-    font-size: 36px;
     margin-bottom: 20px;
-    color: limegreen;
+    color: lime;
 }
 
+/* CTF Container */
 .ctf {
-    background-color: rgba(0, 0, 0, 0.8);
-    margin: 10px 0;
-    padding: 20px;
-    border: 1px solid limegreen;
-    border-radius: 10px;
+    background: #1e2152;
+    border-radius: 15px;
+    margin: 20px auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ctf-header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 5px;
-    border: 1px solid limegreen;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 80%;
+    overflow: hidden; /* Ensures content is contained */
+    transform-origin: center;
 }
 
-.ctf-header:hover {
-    background-color: limegreen;
-    color: black;
+/* CTF Header Styling */
+.ctf-header {
+    padding: 20px;
+    background: rgba(30, 33, 82, 0.7);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    z-index: 2; /* Ensure it appears above content */
 }
 
-.ctf-header h3 {
-    margin: 0;
-    font-size: 24px;
-    color: white;
-    transition: transform 0.3s ease;
-}
-
-.ctf-header:hover h3 {
-    color: black;
-}
-
-.technologies {
-    font-size: 14px;
-    color: limegreen;
-}
-
-/* Zoom and Matrix Effect (Limited to Header) */
-.ctf-header:hover {
-    transform: scale(1.05);
-    background: rgba(0, 255, 0, 0.2);
-}
-
-/* Glowing effect on title */
-.ctf-header h3:hover {
-    text-shadow: 0px 0px 10px limegreen;
-}
-
-/* CTF Content */
+/* CTF Content Styling */
 .ctf-content {
     max-height: 0;
     overflow: hidden;
-    visibility: hidden;
+    padding: 0;
+    background: #000;
+    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
     opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s;
-    padding: 0 10px;
+    visibility: hidden;
 }
 
-/* Show class to handle expand/collapse */
 .ctf-content.show {
-    visibility: visible;
+    max-height: 500px;
+    padding: 20px;
     opacity: 1;
-    max-height: 500px; /* Adjust max-height depending on content */
+    visibility: visible;
 }
 
+/* Markdown Content Styling */
 .ctf-content p {
-    margin: 10px 0;
-    line-height: 1.6;
+    text-align: center;
+    color: #fff;
+}
+
+.ctf-content code {
+    background-color: limegreen;
+    color: black;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.ctf-content pre {
+    background-color: #ccffcc;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+.ctf-content h1, .ctf-content h2, .ctf-content h3 {
+    text-align: center;
+    color: lime;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+}
+
+.ctf-content h1 {
+    max-width: 100%;
+}
+
+/* Glow effect on hover */
+.ctf:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(50, 255, 50, 0.8);
+}
+
+/* Matrix Effect */
+.ctf-header::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 255, 0, 0.5);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    animation: matrix 1s infinite;
+}
+
+.ctf-header:hover::before {
+    opacity: 1;
+}
+
+@keyframes matrix {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .ctf-content pre {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .ctf-content pre {
+        font-size: 16px;
+        padding: 9px;
+    }
 }
 
 /* Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.7);
+    background: rgba(30, 33, 82, 0.7);
+    color: #ffffff;
     text-align: center;
     padding: 20px;
-    color: white;
-    margin-top: 40px;
+    width: 100%;
+    margin-top: auto;
 }
-
-/* Responsive Design for Small Screens */
-@media screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .ctf {
-        padding: 15px;
-    }
-
-    .ctf-header h3 {
-        font-size: 20px;
-    }
-
-    .technologies {
-        font-size: 12px;
-    }
-}
-
