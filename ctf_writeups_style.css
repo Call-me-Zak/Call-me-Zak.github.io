@@ -71,13 +71,7 @@ header nav ul li a:hover {
     max-width: 1200px; /* Center content and constrain width */
 }
 
-/* Parent Container Styling - Make it invisible */
-.ctf-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Spacing between containers */
-    overflow: hidden; /* Hide any overflow */
-}
+
 
 /* CTF Card Styling */
 .ctf {
