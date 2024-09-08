@@ -33,7 +33,7 @@ body {
 
 /* Header Styling */
 header {
-    background: rgba(30, 33, 82, 0.7);
+    background: none; /* Removed the blue background */
     padding: 15px 0;
     text-align: center;
     position: relative;
@@ -66,17 +66,14 @@ header nav ul li a:hover {
 /* CTF Writeups Section */
 .ctf-writeups {
     padding: 20px;
-    background: #11144c;
     margin: 50px auto;
     max-width: 1200px; /* Center content and constrain width */
 }
 
-
-
 /* CTF Card Styling */
 .ctf {
     background: #1e2152;
-    padding: 10px;
+    padding: 20px;
     border-radius: 15px; /* Increased border radius for a more rounded look */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -88,7 +85,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    margin-bottom: 5px; /* Space below header */
+    margin-bottom: 15px; /* Space below header */
     position: relative;
 }
 
@@ -110,7 +107,7 @@ header nav ul li a:hover {
     visibility: hidden;
     transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     background: #1e2152;
-    padding: 10px;
+    padding: 20px;
 }
 
 /* Matrix Effect on Hover */
@@ -179,7 +176,6 @@ header nav ul li a:hover {
     font-family: monospace; /* Use monospace font for code */
     overflow-x: auto; /* Ensure code blocks are scrollable if they exceed container width */
 }
-
 
 /* Footer */
 footer {
