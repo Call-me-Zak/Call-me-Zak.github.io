@@ -87,7 +87,6 @@ header nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    margin-bottom: 15px; /* Space below header */
     position: relative;
 }
 
