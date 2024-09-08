@@ -50,7 +50,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 20px; /* This spacing can be adjusted to define space between the list items */
+    margin: 0 30px; /* This spacing can be adjusted to define space between the list items */
 }
 
 header nav ul li a {
