@@ -16,7 +16,7 @@
         Your browser does not support the video tag.
     </video>
     
-      <!-- Header Section -->
+    <!-- Header Section -->
     <header>
         <nav>
             <ul>
@@ -32,89 +32,93 @@
     <section class="ctf-writeups" id="ctf-writeups">
         <h2>Capture The Flag Writeups</h2>
 
-        <!-- CTF 1 -->
-        <div class="ctf">
-            <div class="ctf-header">
-                <h3>MEOW</h3>
-                <div class="technologies">nmap, telnet</div>
+        <!-- Container for all CTF entries -->
+        <div class="ctf-container">
+            <!-- CTF 1 -->
+            <div class="ctf">
+                <div class="ctf-header">
+                    <h3>MEOW</h3>
+                    <div class="technologies">nmap, telnet</div>
+                </div>
+                <div class="ctf-content" id="ctf1-content">
+                    <!-- The markdown content will be inserted here -->
+                </div>
             </div>
-            <div class="ctf-content" id="ctf1-content">
-                <!-- The markdown content will be inserted here -->
-            </div>
-        </div>
 
-        <!-- CTF 2 -->
-        <div class="ctf">
-            <div class="ctf-header">
-                <h3>FAWN</h3>
-                <div class="technologies">nmap, ftp</div>
+            <!-- CTF 2 -->
+            <div class="ctf">
+                <div class="ctf-header">
+                    <h3>FAWN</h3>
+                    <div class="technologies">nmap, ftp</div>
+                </div>
+                <div class="ctf-content" id="ctf2-content">
+                    <!-- The markdown content will be inserted here -->
+                </div>
             </div>
-            <div class="ctf-content" id="ctf2-content">
-                <!-- The markdown content will be inserted here -->
-            </div>
-        </div>
 
-        <!-- CTF 3 -->
-        <div class="ctf">
-            <div class="ctf-header">
-                <h3>DANCING</h3>
-                <div class="technologies">nmap, smbclient</div>
+            <!-- CTF 3 -->
+            <div class="ctf">
+                <div class="ctf-header">
+                    <h3>DANCING</h3>
+                    <div class="technologies">nmap, smbclient</div>
+                </div>
+                <div class="ctf-content" id="ctf3-content">
+                    <!-- The markdown content will be inserted here -->
+                </div>
             </div>
-            <div class="ctf-content" id="ctf3-content">
-                <!-- The markdown content will be inserted here -->
-            </div>
-        </div>
 
-        <!-- CTF 4 -->
-        <div class="ctf">
-            <div class="ctf-header">
-                <h3>CTF 4</h3>
-                <div class="technologies">SQLMap, John the Ripper</div>
+            <!-- CTF 4 -->
+            <div class="ctf">
+                <div class="ctf-header">
+                    <h3>CTF 4</h3>
+                    <div class="technologies">SQLMap, John the Ripper</div>
+                </div>
+                <div class="ctf-content" id="ctf4-content">
+                    <!-- The markdown content will be inserted here -->
+                </div>
             </div>
-            <div class="ctf-content" id="ctf4-content">
-                <!-- The markdown content will be inserted here -->
-            </div>
-        </div>
 
-        <!-- CTF 5 -->
-        <div class="ctf">
-            <div class="ctf-header">
-                <h3>CTF 5</h3>
-                <div class="technologies">GDB, Ghidra</div>
-            </div>
-            <div class="ctf-content" id="ctf5-content">
-                <!-- The markdown content will be inserted here -->
+            <!-- CTF 5 -->
+            <div class="ctf">
+                <div class="ctf-header">
+                    <h3>CTF 5</h3>
+                    <div class="technologies">GDB, Ghidra</div>
+                </div>
+                <div class="ctf-content" id="ctf5-content">
+                    <!-- The markdown content will be inserted here -->
+                </div>
             </div>
         </div>
     </section>
 
-
     <!-- JavaScript -->
     <script>
         document.querySelectorAll('.ctf-header').forEach(ctf => {
-        ctf.addEventListener('click', function () {
-        const content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null; // Collapse
-            content.style.opacity = "0";    // Fade out
-            content.style.visibility = "hidden";  // Hide visibility
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px"; // Expand based on content height
-            content.style.opacity = "1";    // Fade in
-            content.style.visibility = "visible";  // Show visibility
-        }
+            ctf.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null; // Collapse
+                    content.style.opacity = "0";    // Fade out
+                    content.style.visibility = "hidden";  // Hide visibility
+                    this.parentElement.classList.remove('expanded');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px"; // Expand based on content height
+                    content.style.opacity = "1";    // Fade in
+                    content.style.visibility = "visible";  // Show visibility
+                    this.parentElement.classList.add('expanded');
+                }
 
-        // Close other open containers
-        document.querySelectorAll('.ctf-content').forEach(otherContent => {
-            if (otherContent !== content) {
-                otherContent.style.maxHeight = null;
-                otherContent.style.opacity = "0";
-                otherContent.style.visibility = "hidden";
-                    }    
+                // Close other open containers
+                document.querySelectorAll('.ctf-content').forEach(otherContent => {
+                    if (otherContent !== content) {
+                        otherContent.style.maxHeight = null;
+                        otherContent.style.opacity = "0";
+                        otherContent.style.visibility = "hidden";
+                        otherContent.parentElement.classList.remove('expanded');
+                    }
                 });
             });
         });
-
 
         // Function to fetch and render markdown content
         function loadMarkdownContent(mdFile, elementId) {
@@ -135,7 +139,7 @@
         loadMarkdownContent('ctf5.md', 'ctf5-content');
     </script>
 
-       <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Zakaria's Portfolio | All Rights Reserved</p>
     </footer>
