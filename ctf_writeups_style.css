@@ -110,7 +110,7 @@ header nav ul li a:hover {
     visibility: hidden;
     transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     background: #1e2152;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Matrix Effect on Hover */
