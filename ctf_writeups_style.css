@@ -49,7 +49,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 10px; /* Increase margin for better spacing */
+    margin: 0 10px;
 }
 
 header nav ul li a {
@@ -67,169 +67,47 @@ header nav ul li a:hover {
 .ctf-writeups {
     padding: 20px;
     background: #11144c;
-    text-align: center;
+    margin: 50px 0;
 }
 
-.ctf-writeups h2 {
-    margin-bottom: 20px;
-    color: lime;
-}
-
-/* CTF Container */
+/* CTF Card Styling */
 .ctf {
     background: #1e2152;
-    border-radius: 15px;
-    margin: 20px auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     position: relative;
-    text-align: center;
-    cursor: pointer;
-    width: 80%;
-    overflow: hidden; /* Ensures content is contained */
-    transform-origin: center;
+    overflow: hidden;
+    margin-bottom: 20px; /* Ensures cards are stacked vertically */
 }
 
-/* CTF Header Styling */
 .ctf-header {
-    padding: 5px 20px;
-    background: rgba(30, 33, 82, 0.7);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    z-index: 2; /* Ensure it appears above content */
-    border-radius: 5px;
     display: flex;
-    justify-content: space-between; /* Distribute space between items */
-    align-items: center; /* Center items vertically */
-    position: relative; /* Required for positioning the matrix effect */
+    justify-content: space-between;
+    cursor: pointer;
 }
 
 .ctf-header h3 {
-    margin: 0;
-    color: #00ff00; /* Lime green for the title */
-}
-
-.ctf-header .technologies {
-    color: #00ff00; /* Lime green for the technologies */
-    font-style: italic;
-    margin-left: auto; /* pushes to left */
-}
-
-/* CTF Content Styling */
-.ctf-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 10px;
-    background: #000;
-    transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.ctf-content.show {
-    max-height: 500px; /* new was 500px */
-    padding: 20px;
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Markdown Content Styling */
-.ctf-content p {
-    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
     color: #fff;
 }
 
-.ctf-content code {
-    background-color: limegreen;
-    color: black;
-    font-weight: bold;
-    padding: 2px 4px;
-    border-radius: 4px;
+.technologies {
+    color: #d3d3d3;
 }
 
-.ctf-content pre {
-    background-color: #ccffcc;
-    padding: 10px;
-    border-radius: 5px;
-    color: black;
-    font-family: monospace;
-    overflow-x: auto;
-}
-
-.ctf-content h1, .ctf-content h2, .ctf-content h3 {
-    text-align: center;
-    color: lime;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 0 auto;
-}
-
-.ctf-content h1 {
-    max-width: 100%;
-}
-
-/* Glow effect on hover */
-.ctf:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(50, 255, 50, 0.8);
-}
-
-/* Matrix Effect */
-.ctf-header::before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: rgba(0, 255, 0, 0.5);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2em;
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: repeat(20, 1fr);
+.ctf-content {
+    max-height: 0;
     opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    z-index: 1;
-    animation: matrix 1s infinite;
-}
-
-.ctf-header:hover::before {
-    opacity: 1;
-}
-
-@keyframes matrix {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(100%);
-    }
-}
-
-/* Responsive Styles */
-@media (max-width: 600px) {
-    .ctf-content pre {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 1024px) {
-    .ctf-content pre {
-        font-size: 16px;
-        padding: 9px;
-    }
+    visibility: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    background: #1e2152;
+    padding: 20px;
 }
 
 /* Matrix Effect on Hover */
-.project-card::before {
+.ctf::before {
     content: ' ';
     position: absolute;
     top: 0;
@@ -237,23 +115,21 @@ header nav ul li a:hover {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-    color: rgba(0, 255, 255, 0.5);
+    color: rgba(0, 255, 0, 0.5); /* Glow in green */
     font-family: 'Courier New', Courier, monospace;
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
     z-index: 1;
-    animation: matrix-blue 1s infinite;
+    animation: matrix-green 1s infinite;
 }
 
-.project-card:hover::before {
+.ctf:hover::before {
     opacity: 1;
 }
 
-
-
 /* Matrix Effect Animation */
-@keyframes matrix-blue {
+@keyframes matrix-green {
     0% {
         transform: translateY(-100%);
     }
@@ -271,9 +147,4 @@ footer {
     position: relative;
     z-index: 1;
     margin-top: auto;
-}
-
-footer:hover {
-    background: rgba(30, 33, 82, 0.8);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
