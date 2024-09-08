@@ -69,6 +69,7 @@ header nav ul li a:hover {
 
 /* CTF Writeups Section */
 .ctf-writeups {
+    flex-grow: 1; /* This ensures that this section expands to fill the remaining space */
     padding: 20px;
     margin: 50px auto;
     max-width: 1200px; /* Center content and constrain width */
@@ -144,7 +145,6 @@ header nav ul li a:hover {
     overflow: hidden;
     transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     color: white; /* Paragraphs in white */
-    padding: 15px; /* Padding for content */
     border-radius: 0 0 15px 15px; /* Match card's rounded corners */
 }
 
@@ -201,7 +201,7 @@ footer {
     background: rgba(30, 33, 82, 0.7);
     color: #ffffff;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     position: relative;
     z-index: 1;
     margin-top: auto; /* Push footer to the bottom */
