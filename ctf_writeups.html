@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Writeups</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="ctf_writeups_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    
+    <!-- Background Video -->
+    <video class="background-video" autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2019/08/17/26097-357512275_large.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CTF Writeups Section -->
+    <section class="ctf-writeups" id="ctf-writeups">
+        <h2>Capture The Flag Writeups</h2>
+
+        <!-- CTF 1 -->
+        <div class="ctf">
+            <div class="ctf-header">
+                <h3>MEOW</h3>
+                <div class="technologies">nmap, telnet</div>
+            </div>
+            <div class="ctf-content" id="ctf1-content">
+                <!-- The markdown content will be inserted here -->
+            </div>
+        </div>
+
+        <!-- CTF 2 -->
+        <div class="ctf">
+            <div class="ctf-header">
+                <h3>FAWN</h3>
+                <div class="technologies">nmap, ftp</div>
+            </div>
+            <div class="ctf-content" id="ctf2-content">
+                <!-- The markdown content will be inserted here -->
+            </div>
+        </div>
+
+        <!-- CTF 3 -->
+        <div class="ctf">
+            <div class="ctf-header">
+                <h3>DANCING</h3>
+                <div class="technologies">nmap, smbclient</div>
+            </div>
+            <div class="ctf-content" id="ctf3-content">
+                <!-- The markdown content will be inserted here -->
+            </div>
+        </div>
+
+        <!-- CTF 4 -->
+        <div class="ctf">
+            <div class="ctf-header">
+                <h3>CTF 4</h3>
+                <div class="technologies">SQLMap, John the Ripper</div>
+            </div>
+            <div class="ctf-content" id="ctf4-content">
+                <!-- The markdown content will be inserted here -->
+            </div>
+        </div>
+
+        <!-- CTF 5 -->
+        <div class="ctf">
+            <div class="ctf-header">
+                <h3>CTF 5</h3>
+                <div class="technologies">GDB, Ghidra</div>
+            </div>
+            <div class="ctf-content" id="ctf5-content">
+                <!-- The markdown content will be inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Zachary's Portfolio | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.querySelectorAll('.ctf-header').forEach(ctf => {
+            ctf.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                if (content.classList.contains('show')) {
+                    content.classList.remove('show'); // Collapse
+                } else {
+                    document.querySelectorAll('.ctf-content').forEach(ctfContent => ctfContent.classList.remove('show')); // Collapse all
+                    content.classList.add('show'); // Expand clicked content
+                }
+            });
+        });
+
+        // Function to fetch and render markdown content
+        function loadMarkdownContent(mdFile, elementId) {
+            fetch(mdFile)
+                .then(response => response.text())
+                .then(markdown => {
+                    const contentElement = document.getElementById(elementId);
+                    contentElement.innerHTML = marked.parse(markdown);
+                })
+                .catch(error => console.error('Error fetching markdown:', error));
+        }
+
+        // Load markdown files for each CTF content div
+        loadMarkdownContent('ctf1.md', 'ctf1-content');
+        loadMarkdownContent('ctf2.md', 'ctf2-content');
+        loadMarkdownContent('ctf3.md', 'ctf3-content');
+        loadMarkdownContent('ctf4.md', 'ctf4-content');
+        loadMarkdownContent('ctf5.md', 'ctf5-content');
+    </script>
+</body>
+</html>
