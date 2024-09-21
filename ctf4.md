@@ -1,4 +1,4 @@
-### CTF Write Up for HTB_REDEEMER
+# CTF Write Up for REDEEMER on HTB Platform
 
 ### Briefing
 This is a CTF writeup for REDEEMER on HTB Platform.
